@@ -6,34 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // 0. Initialize Hero Grid Squares (Pink & Green Checkerboard)
-    const initHeroGrid = () => {
-        const grid = document.querySelector('.hero-grid-overlay');
-        if (!grid) return;
-        grid.innerHTML = '';
-        
-        // Define grid structure (12 columns, 8 rows)
-        const cols = 12;
-        const rows = 8;
-        const total = cols * rows;
-        
-        grid.style.display = 'grid';
-        grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-        grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-        
-        for (let i = 0; i < total; i++) {
-            const square = document.createElement('div');
-            square.classList.add('grid-square');
-            
-            // Checkerboard pattern assignment
-            const isEven = (Math.floor(i / cols) + (i % cols)) % 2 === 0;
-            square.classList.add(isEven ? 'even-square' : 'odd-square');
-            
-            grid.appendChild(square);
-        }
-    };
-    initHeroGrid();
-
     // 1. Projects Database (Real local assets from assets/ folders)
     const projectsData = {
         'gil-goren': {
