@@ -408,12 +408,12 @@ a {
 
 /* Block alignment: justifying both lines to match the exact same left/right margins */
 .hero-title .title-line:nth-child(1) {
-    letter-spacing: -0.04em; /* Tight tracking for 'SHYUZZ' */
+    letter-spacing: 0.025em; /* Slightly widened tracking for 'SHYUZZ' as requested to help align the vertical S */
 }
 
 .hero-title .title-line:nth-child(2) {
-    letter-spacing: 0.125em; /* Expanded tracking to stretch 'STUDIO' to match the width of 'SHYUZZ' exactly */
-    padding-left: 0.125em; /* Offset trailing space to preserve perfect centering */
+    letter-spacing: 0.178em; /* Expanded tracking to stretch 'STUDIO' to match the width of 'SHYUZZ' exactly */
+    padding-left: 0.178em; /* Offset trailing space to preserve perfect vertical alignment of the starting letter S */
 }
 
 /* Custom rotating circular badge with the new tagline, positioned dynamically inside the letter 'O' of 'STUDIO' using viewport units */
