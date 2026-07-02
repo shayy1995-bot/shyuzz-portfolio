@@ -382,9 +382,9 @@ a {
 }
 
 .hero-title {
-    font-family: 'Syne', 'Outfit', sans-serif;
-    font-size: clamp(4.5rem, 14.2vw, 13.2rem); /* Dynamic scale constrained exactly inside the top and bottom layout boundaries */
-    line-height: 0.72; /* Tightened to accommodate the vertical stretch */
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(4.5rem, 14.5vw, 14rem); /* Proportional viewport-based size matching Idyllic's logic */
+    line-height: 0.7; /* Tightened line-height for solid block composition */
     text-transform: uppercase;
     margin-top: 0; /* Centered vertically via flexbox, preventing overflow against the header */
     margin-bottom: 0;
@@ -395,7 +395,7 @@ a {
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
     letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
-    transform: scaleY(1.35); /* Stretches the font vertically to occupy the frame height without widening it */
+    transform: scaleY(1.42); /* Elegant vertical stretch matching the height bounds */
     transform-origin: center center;
     will-change: transform;
 }
@@ -405,14 +405,14 @@ a {
     overflow: hidden;
 }
 
-/* Custom rotating circular badge with the new tagline, scaled down and positioned inside the letter 'O' of 'STUDIO' */
+/* Custom rotating circular badge with the new tagline, positioned dynamically inside the letter 'O' of 'STUDIO' using viewport units */
 .hero-rotating-badge {
     position: absolute;
-    width: clamp(90px, 9vw, 125px); /* Scaled down to fit perfectly inside the hole of the letter O */
-    height: clamp(90px, 9vw, 125px);
+    left: 68.5vw; /* Perfectly aligned to the center of the letter O */
+    top: 23vw; /* Aligned vertically to the second line of text (STUDIO) */
+    width: 12vw; /* Scales proportionally with the title text size */
+    height: 12vw;
     z-index: 3;
-    right: 16.5%; /* Positioned horizontally exactly in the center of the letter O */
-    top: 56.5%; /* Positioned vertically inside the second line of text (STUDIO) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -420,7 +420,7 @@ a {
     background-color: #ffffff; /* Solid white background sticker as requested */
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 6px; /* Safe rotation padding */
+    padding: 0.5vw; /* Safe rotation padding */
 }
 
 .badge-svg {
