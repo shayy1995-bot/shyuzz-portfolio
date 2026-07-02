@@ -382,9 +382,9 @@ a {
 }
 
 .hero-title {
-    font-family: 'Syne', 'Outfit', sans-serif;
-    font-size: clamp(4.5rem, 14.2vw, 13.2rem); /* Dynamic scale constrained exactly inside the top and bottom layout boundaries */
-    line-height: 0.72; /* Tightened to accommodate the vertical stretch */
+    font-family: 'Antonio', 'Outfit', sans-serif;
+    font-size: clamp(5rem, 16vw, 15.5rem); /* Expanded viewport scaling because Antonio is narrower and won't overflow */
+    line-height: 0.7; /* Tightened line-height for block vertical composition */
     text-transform: uppercase;
     margin-top: 0; /* Centered vertically via flexbox, preventing overflow against the header */
     margin-bottom: 0;
@@ -393,9 +393,9 @@ a {
     align-items: center; /* Center each text line */
     text-align: center;
     color: #1c060d; /* High-contrast deep dark burgundy */
-    font-weight: 800;
-    letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
-    transform: scaleY(1.35); /* Stretches the font vertically to occupy the frame height without widening it */
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Clean, modern tracking for condensed letters */
+    transform: scaleY(1.85); /* Massive vertical stretch to match Idyllic's tall, condensed look */
     transform-origin: center center;
     will-change: transform;
 }
