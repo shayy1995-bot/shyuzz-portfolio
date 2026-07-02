@@ -592,4 +592,18 @@ document.addEventListener('DOMContentLoaded', () => {
             closeCaseStudy();
         }
     });
+
+    // Header scroll background effect (adds 'scrolled' class when page is scrolled)
+    const header = document.querySelector('.main-header');
+    if (header) {
+        const toggleHeaderBackground = () => {
+            if (window.scrollY > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', toggleHeaderBackground);
+        toggleHeaderBackground(); // Run initially in case page loaded scrolled
+    }
 });
