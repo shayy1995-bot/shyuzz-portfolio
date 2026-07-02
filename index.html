@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyuzz Studio | Branding & Graphic Design</title>
+    <meta name="description" content="Portfolio of Shay Yuz, brand & graphic designer. Bold identity design, exhibition graphics, murals, and visual storytelling.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="index.css?v=1.1">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <span class="cursor-text">VIEW</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">shyuzz studio</a>
+            
+            <nav class="main-nav">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="social-links">
+                <!-- Tiny integrated Devil GIF animation in Header -->
+                <div class="mini-gif-icon">
+                    <img src="assets/Devil.gif" alt="Devil icon" class="header-mini-gif">
+                </div>
+                <a href="https://www.instagram.com/shyuzz.studio/" target="_blank" aria-label="Instagram">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/shay.yuz" target="_blank" aria-label="Facebook">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Hamburger Button for mobile -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="#work" class="mobile-nav-link">Work</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-container">
+                    <h1 class="hero-title">
+                        <span class="title-line">shyuzz</span>
+                        <span class="title-line text-magenta">studio</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">Disruptive Brand & Graphic Design</p>
+
+                    <!-- Clean brand logo sticker embedded in Hero layout rather than randomly floating -->
+                    <div class="hero-brand-sticker">
+                        <img src="assets/Sticker shyuz.png" alt="Shyuzz Logo" class="hero-logo-img">
+                    </div>
+
+                    <!-- Clean inline copy text sticker with Playfair Serif styling -->
+                    <div class="hero-text-card">
+                        <span class="hero-card-tag">CREATIVE MOTO</span>
+                        <p class="hero-card-p">Designing your story with <em>sassy harmony</em></p>
+                    </div>
+
+                    <!-- Background Parallax Orb -->
+                    <div class="floating-graphic" data-speed="1.5">
+                        <div class="neon-orb"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 1.5: Fixed Scroll Column Story (Left: Pinned Hypnotic GIF, Right: Scroll Story) -->
+            <section class="story-fixed-scroll-section">
+                <div class="story-fixed-scroll-container">
+                    <div class="story-fixed-scroll-row">
+                        
+                        <!-- Left Fixed/Pinned half (Hypnotic background + GIF) -->
+                        <div class="fixed-media-column">
+                            <div class="fixed-media-wrapper">
+                                <div class="hypnotic-bg"></div>
+                                <img src="assets/Devil.gif" alt="Hypnotic Devil GIF" class="fixed-gif-img">
+                            </div>
+                        </div>
+
+                        <!-- Right scrollable story text half -->
+                        <div class="scroll-text-column">
+                            <div class="story-block">
+                                <span class="story-tag">OUR MANIFESTO</span>
+                                <h2 class="story-title-highlight"><span class="reveal-text">Destined for more</span><br><span class="reveal-text">than just average.</span></h2>
+                            </div>
+                            <div class="story-block scroll-reveal-block">
+                                <p class="reveal-paragraph">You are in a world full of noise. Everyone else is shouting loudly at the top of their lungs, so your first instinct is to yell back, right?</p>
+                            </div>
+                            <div class="story-block scroll-reveal-block">
+                                <p class="reveal-paragraph">Well, bad news... you cannot out-shout them. And quite frankly, we don't think you should even try.</p>
+                            </div>
+                            <div class="story-block scroll-reveal-block">
+                                <p class="reveal-paragraph">The loudest person in the room isn't the best; they are just... well... loud. We believe in another path.</p>
+                            </div>
+                            <div class="story-block scroll-reveal-block">
+                                <p class="reveal-paragraph">Shyuzz Studio is here to help you disrupt, leaving your competitors speechless. Because the world doesn't need another echo - it needs a voice.</p>
+                            </div>
+                            <div class="story-block scroll-reveal-block">
+                                <p class="reveal-paragraph">We design graphics, branding campaigns, and murals that capture attention, build deep visual tension, and hold it. No templates, no average layouts. Only raw creative strategy.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Cutout Image Marquee -->
+            <section class="cutout-marquee-section">
+                <div class="image-marquee">
+                    <div class="image-marquee__track">
+
+                        <!-- cutout1: Haifa Bus -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout1.png" alt="Haifa City Tour Bus" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Haifa City Tour<br><span>Double decker bus branding</span></div>
+                        </div>
+
+                        <!-- cutout2: Andy Warhol rug + tattoo -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout2.png" alt="Andy Warhol Banana Rug" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Warhol-inspired rug<br><span>I made this rug & also tattooed it on my body</span></div>
+                        </div>
+
+                        <!-- cutout3: Scuba Diver -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout3.png" alt="Scuba Diving Illustration" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Scuba Diving Illustration<br><span>Hand-painted vector art</span></div>
+                        </div>
+
+                        <!-- cutout4: Old cosplay/candy tin box inspiration -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout4.png" alt="Vintage Telma Candy Box" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Vintage Telma Tin Box<br><span>Inspired by old product packaging</span></div>
+                        </div>
+
+                        <!-- cutout5: Gumball Machine -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout5.png" alt="Gumball Machine Graphic" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Gumball Machine<br><span>Popping pop-art candy graphics</span></div>
+                        </div>
+
+                        <!-- cutout6: Crowned Duck -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout6.png" alt="Pink Duck with Golden Crown" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Pink Duck with Crown<br><span>The queen of pop-art attitude</span></div>
+                        </div>
+
+                        <!-- Seamless loop duplicates -->
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout1.png" alt="Haifa City Tour Bus" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Haifa City Tour<br><span>Double decker bus branding</span></div>
+                        </div>
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout2.png" alt="Andy Warhol Banana Rug" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Warhol-inspired rug<br><span>I made this rug & also tattooed it on my body</span></div>
+                        </div>
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout3.png" alt="Scuba Diving Illustration" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Scuba Diving Illustration<br><span>Hand-painted vector art</span></div>
+                        </div>
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout4.png" alt="Vintage Telma Candy Box" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Vintage Telma Tin Box<br><span>Inspired by old product packaging</span></div>
+                        </div>
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout5.png" alt="Gumball Machine Graphic" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Gumball Machine<br><span>Popping pop-art candy graphics</span></div>
+                        </div>
+                        <div class="image-marquee__item">
+                            <img src="assets/cutouts/cutout6.png" alt="Pink Duck with Golden Crown" class="cutout-img cutout-img--default">
+                            <div class="cutout-label">Pink Duck with Crown<br><span>The queen of pop-art attitude</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Section: Things I'm not so great at (Idyllic Style Double Marquee) -->
+            <section id="notgoodat">
+                <h3 class="notgoodat-title"><span class="reveal-text">Things my resume conveniently omitted...</span></h3>
+                
+                <!-- Lane 1 (Scrolls Left) -->
+                <div class="marquee-lane">
+                    <div class="marquee-lane__inner">
+                        <span class="red denton">Any form of dancing</span>
+                        <span class="blue-light kafka">Limiting screentime</span>
+                        <span class="pink denton">Saying no to coffee</span>
+                        <span class="orange marthi">Closing browser tabs</span>
+                        <span class="purple denton">Going to bed before 2 AM</span>
+                        <span class="green-dark kafka">Keeping a tidy studio</span>
+                        
+                        <!-- Duplicate for seamless loop -->
+                        <span class="red denton">Any form of dancing</span>
+                        <span class="blue-light kafka">Limiting screentime</span>
+                        <span class="pink denton">Saying no to coffee</span>
+                        <span class="orange marthi">Closing browser tabs</span>
+                        <span class="purple denton">Going to bed before 2 AM</span>
+                        <span class="green-dark kafka">Keeping a tidy studio</span>
+                    </div>
+                </div>
+
+                <!-- Lane 2 (Scrolls Right - Alternating) -->
+                <div class="marquee-lane alternating">
+                    <div class="marquee-lane__inner">
+                        <span class="green-light denton">Listening to music after the 2000s</span>
+                        <span class="yellow marthi">Keeping a clean desktop</span>
+                        <span class="pink kafka">Rollerblade coordination</span>
+                        <span class="green-light denton">Getting rid of plants</span>
+                        <span class="yellow marthi">Keeping a tidy wardrobe</span>
+                        <span class="red denton">Pretending to like boring minimalism</span>
+                        
+                        <!-- Duplicate for seamless loop -->
+                        <span class="green-light denton">Listening to music after the 2000s</span>
+                        <span class="yellow marthi">Keeping a clean desktop</span>
+                        <span class="pink kafka">Rollerblade coordination</span>
+                        <span class="green-light denton">Getting rid of plants</span>
+                        <span class="yellow marthi">Keeping a tidy wardrobe</span>
+                        <span class="red denton">Pretending to like boring minimalism</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 1.7: Massive Accent Typography Banner -->
+            <section class="massive-banner-section">
+                <div class="massive-banner-container">
+                    <h2 class="massive-text">
+                        WE SHAPE BRANDS WITH A
+                        <br>
+                        <em class="magnificent-text">pretty attitude</em> AND A
+                        <br>
+                        <em class="magnificent-text">Disruptive</em> MINDSET.
+                    </h2>
+                </div>
+            </section>
+
+            <!-- Projects Showcase Section (Idyllic Inspired Layout) -->
+            <section id="work" class="work-section">
+                <div class="work-container">
+                    <div class="section-header">
+                        <h2 class="section-title"><span class="reveal-text">Selected Case Studies</span></h2>
+                        
+                        <!-- Filter Bar -->
+                        <div class="filter-bar">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="branding">Branding</button>
+                            <button class="filter-btn" data-filter="murals">Murals</button>
+                        </div>
+                    </div>
+
+                    <!-- Work Editorial Layout (Alternating Large Cards) -->
+                    <div class="work-editorial">
+                        
+                        <!-- Project 1 (Full Width Editorial Banner) -->
+                        <div class="project-block full-width" data-category="branding" data-project-id="gil-goren">
+                            <div class="project-media">
+                                <img src="assets/branding/“Can You See The Beauty” — Exhibition Design for Artist Gil Goren/rotator.png" alt="“Can You See The Beauty” Exhibition Design" class="project-img">
+                            </div>
+                            <div class="project-details-layout">
+                                <div class="project-meta-info">
+                                    <span class="project-tag">Exhibition Design • Branding</span>
+                                    <h3 class="project-title">“Can You See The Beauty”</h3>
+                                </div>
+                                <div class="project-desc-wrapper">
+                                    <p class="project-desc">Comprehensive exhibition design and identity for artist Gil Goren at the Hermann Struck Museum. The layout creates a bold, RGB-based contemporary dialogue with the museum's historical architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side-by-Side Offset Row 1 -->
+                        <div class="project-row">
+                            
+                            <!-- Project 2 (Left Column) -->
+                            <div class="project-block col-left" data-category="branding" data-project-id="red-bus">
+                                <div class="project-media">
+                                    <img src="assets/branding/Haifa Tourism The Red Bus Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png" alt="Haifa Tourism Red Bus Design" class="project-img">
+                                </div>
+                                <div class="project-details-layout">
+                                    <div class="project-meta-info">
+                                        <span class="project-tag">Branding • Transport Design</span>
+                                        <h3 class="project-title">Haifa Tourism: The Red Bus</h3>
+                                    </div>
+                                    <p class="project-desc">Visual concept and detailed graphic design mapping for Haifa's official tourism double-decker bus, adding character and vibrant local identity to the streetscape.</p>
+                                </div>
+                            </div>
+
+                            <!-- Project 3 (Right Column) -->
+                            <div class="project-block col-right" data-category="branding" data-project-id="branding-myself">
+                                <div class="project-media">
+                                    <img src="assets/branding/branding Myself The Most Difficult Client/04e3a117-75b8-497b-804b-d801a6688faa.png" alt="Branding Myself" class="project-img">
+                                </div>
+                                <div class="project-details-layout">
+                                    <div class="project-meta-info">
+                                        <span class="project-tag">Branding • Self-Identity</span>
+                                        <h3 class="project-title">Branding Myself: The Difficult Client</h3>
+                                    </div>
+                                    <p class="project-desc">Developing a cheeky, bold, and sassy visual identity for Shyuzz Studio. Infused with neon hues, custom icons, and interactive digital layout concepts.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Project 4 (Full Width Editorial Banner 2) -->
+                        <div class="project-block full-width" data-category="murals" data-project-id="garin-tzabar">
+                            <div class="project-media">
+                                <img src="assets/murals/Garin Tzabar | Community Wall Art/540514125_1171119641713980_4907827523360123064_n.jpg" alt="Garin Tzabar Community Wall Art" class="project-img">
+                            </div>
+                            <div class="project-details-layout">
+                                <div class="project-meta-info">
+                                    <span class="project-tag">Environmental Art • Mural Design</span>
+                                    <h3 class="project-title">Garin Tzabar: Community Wall Art</h3>
+                                </div>
+                                <div class="project-desc-wrapper">
+                                    <p class="project-desc">A large-scale public mural design created for Garin Tzabar, blending illustrative community symbols with bold graphic elements to revitalize a shared urban space.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side-by-Side Offset Row 2 -->
+                        <div class="project-row">
+                            
+                            <!-- Project 5 (Left Column) -->
+                            <div class="project-block col-left" data-category="murals" data-project-id="papa-bakery">
+                                <div class="project-media">
+                                    <img src="assets/murals/Papa Bakery/IMG_3312.jpeg" alt="Papa Bakery Mural" class="project-img">
+                                </div>
+                                <div class="project-details-layout">
+                                    <div class="project-meta-info">
+                                        <span class="project-tag">Mural • Commercial Spaces</span>
+                                        <h3 class="project-title">Papa Bakery Murals</h3>
+                                    </div>
+                                    <p class="project-desc">Handcrafted interior mural designs created for Papa Bakery, establishing a warm, artisanal brand story through typographic painting and illustrations.</p>
+                                </div>
+                            </div>
+
+                            <!-- Project 6 (Right Column) -->
+                            <div class="project-block col-right" data-category="branding" data-project-id="pop-art">
+                                <div class="project-media">
+                                    <img src="assets/branding/Pop Art Family Festival/DL-56246 POP ART FAMILIES.png" alt="Pop Art Family Festival" class="project-img">
+                                </div>
+                                <div class="project-details-layout">
+                                    <div class="project-meta-info">
+                                        <span class="project-tag">Identity • Event Branding</span>
+                                        <h3 class="project-title">Pop Art Family Festival</h3>
+                                    </div>
+                                    <p class="project-desc">Visual language, logo, and marketing banner suites developed for the Pop Art Family Festival, featuring high-contrast illustration styling.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Project 7 (Full Width Editorial Banner 3) -->
+                        <div class="project-block full-width" data-category="branding" data-project-id="museums-campaign">
+                            <div class="project-media">
+                                <img src="assets/branding/Haifa Museums Promotional Poster Series/DL-57304 Passover HMS Banners פלזמה 1600x916.png" alt="Haifa Museums Poster Design" class="project-img">
+                            </div>
+                            <div class="project-details-layout">
+                                <div class="project-meta-info">
+                                    <span class="project-tag">Campaign • Editorial Poster</span>
+                                    <h3 class="project-title">Haifa Museums: Campaign Series</h3>
+                                </div>
+                                <div class="project-desc-wrapper">
+                                    <p class="project-desc">A series of high-energy exhibition marketing posters and outdoor banners designed for Haifa Museums, using bold colorblocking and structured typography to maximize public engagement.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section (Editorial Layout) -->
+            <section id="about" class="about-section">
+                <div class="about-container">
+                    <div class="about-grid">
+                        
+                        <div class="about-text-content">
+                            <span class="about-badge">Nice to meet you</span>
+                            
+                            <!-- Integrated Bubble Shay GIF next to about title -->
+                            <h2 class="about-title">
+                                <span class="reveal-text">It's Me Time :)</span>
+                                <div class="inline-gif-bubble">
+                                    <img src="assets/Bubble_Shay.gif" alt="Shay Bubble">
+                                </div>
+                                <br><span class="reveal-text" style="color: var(--color-magenta);">Shay Yuz</span>
+                            </h2>
+                            <p class="about-p">I'm Shay, a graphic and brand designer passionate about turning stories into unforgettable visual experiences. I believe great design should stand out, surprise, and balance clear aesthetic rules with a healthy dose of sass and creativity.</p>
+                            <p class="about-p">Whether it's a museum exhibition, a large conference branding, a book design, or a mural - I infuse it with rich colors and strong typography that leave a lasting mark.</p>
+                            
+                            <div class="skills-chips">
+                                <span class="skill-chip">Branding & Identity</span>
+                                <span class="skill-chip">Exhibition & Spatial Design</span>
+                                <span class="skill-chip">Book & Editorial Design</span>
+                                <span class="skill-chip">Typography</span>
+                                <span class="skill-chip">Digital Illustration</span>
+                            </div>
+                        </div>
+
+                        <div class="about-visual">
+                            <div class="about-image-wrapper">
+                                <div class="about-image-placeholder">
+                                    <span class="placeholder-text">Shay Yuz</span>
+                                </div>
+                                <div class="about-frame-sticker">
+                                    SASSY CREATIVE
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                
+                <!-- Infinite Marquee -->
+                <div class="marquee-wrapper">
+                    <div class="marquee-content">
+                        <span>TALK TO ME • CONTACT SHYUZZ • LET'S DESIGN SOMETHING SASSY •</span>
+                        <span>TALK TO ME • CONTACT SHYUZZ • LET'S DESIGN SOMETHING SASSY •</span>
+                        <span>TALK TO ME • CONTACT SHYUZZ • LET'S DESIGN SOMETHING SASSY •</span>
+                        <span>TALK TO ME • CONTACT SHYUZZ • LET'S DESIGN SOMETHING SASSY •</span>
+                    </div>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-grid">
+                        
+                        <div class="contact-details">
+                            <h3 class="contact-heading">Let's start a project together!</h3>
+                            <p class="contact-p">Have an interesting idea, a wall that needs life, or a brand that needs redefining? Drop me a line and let's talk.</p>
+                            
+                            <div class="contact-items">
+                                <div class="contact-item">
+                                    <span class="contact-label">Mobile</span>
+                                    <a href="tel:+972526502054" class="contact-link">+972-52-6502054</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:shayy1995@gmail.com" class="contact-link">shayy1995@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Integrated Fuck GIF animation as a small cheeky detail in the contact section -->
+                            <div class="contact-cheeky-gif">
+                                <img src="assets/Fuck.gif" alt="Cheeky animated detail" class="mini-fuck-gif">
+                            </div>
+                        </div>
+
+                        <div class="contact-form-wrapper">
+                            <form class="contact-form" action="#" method="POST">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                                    <label for="name" class="form-label">Full Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                                    <label for="email" class="form-label">Email Address</label>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="message" name="message" class="form-input" rows="4" placeholder=" " required></textarea>
+                                    <label for="message" class="form-label">What's on your mind?</label>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span>Send Message</span>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="main-footer">
+                        <p class="footer-copy">© All rights reserved to Shay Yuz • Shyuzz Studio 2026</p>
+                    </footer>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Case Study Fullscreen Animated Overlay (Modal) -->
+    <div class="project-modal" id="project-modal">
+        <button class="modal-close-btn" aria-label="Close Case Study">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-scroll-container">
+            <div class="modal-header">
+                <span class="modal-tag" id="modal-tag">Branding</span>
+                <h2 class="modal-title" id="modal-title">Project Title</h2>
+                <div class="modal-desc-container">
+                    <p class="modal-desc" id="modal-desc">Project description goes here...</p>
+                </div>
+            </div>
+            
+            <!-- Vertical Gallery of all project assets -->
+            <div class="modal-gallery" id="modal-gallery">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & ScrollTrigger (No Lenis - Native Scroll used for speed and responsiveness) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main JS Code -->
+    <script src="index.js?v=1.1"></script>
+</body>
+</html>
