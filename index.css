@@ -150,12 +150,15 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+    height: 80px; /* Fixed height like Idyllic */
     z-index: 1000;
-    padding: 1.5rem var(--container-padding);
+    padding: 0 var(--container-padding);
     background-color: transparent;
     backdrop-filter: none;
     border-bottom: 1px solid transparent;
     transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
 }
 
 .main-header.scrolled {
@@ -168,6 +171,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -180,6 +184,7 @@ a {
     color: var(--color-magenta);
     text-transform: lowercase;
     position: relative;
+    z-index: 1001;
 }
 
 .logo::after {
@@ -197,51 +202,10 @@ a {
     width: 100%;
 }
 
-.main-nav {
-    display: flex;
-    gap: 3rem;
-}
-
-.nav-link {
-    font-size: var(--fs-nav);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    position: relative;
-    padding: 0.5rem 0;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-green);
-    transition: var(--transition-smooth);
-}
-
-.nav-link:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-.social-links {
+.header-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-}
-
-.social-links a {
-    color: var(--color-text);
-    opacity: 0.8;
-}
-
-.social-links a:hover {
-    color: var(--color-magenta);
-    transform: translateY(-2px);
-    opacity: 1;
+    gap: 2rem;
 }
 
 /* Integrated Mini GIF in Header */
@@ -253,6 +217,7 @@ a {
     justify-content: center;
     overflow: hidden;
     border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-mini-gif {
@@ -261,73 +226,154 @@ a {
     object-fit: cover;
 }
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
+/* Premium Fullscreen Hamburger Menu Button (Inspired by Idyllic) */
+.fullscreen-hamburger {
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
     flex-direction: column;
-    gap: 6px;
+    justify-content: center;
+    gap: 7px;
+    width: 44px;
+    height: 32px;
+    padding: 0;
     z-index: 1002;
-    padding: 8px;
 }
 
-.mobile-menu-btn .bar {
-    width: 25px;
-    height: 2px;
+.fullscreen-hamburger span {
+    display: block;
+    width: 32px;
+    height: 2.5px;
     background-color: var(--color-text);
     transition: var(--transition-smooth);
+    transform-origin: center;
 }
 
-/* Mobile Overlay Menu */
-.mobile-menu-overlay {
+/* Hamburger active transformation (when overlay is open) */
+.fullscreen-hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background-color: var(--color-text-white);
+}
+
+.fullscreen-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.fullscreen-hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background-color: var(--color-text-white);
+}
+
+/* Fullscreen Navigation Overlay (Idyllic Style) */
+.fullscreen-nav-overlay {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    background-color: var(--color-bg);
-    z-index: 1001;
+    background-color: rgba(11, 11, 13, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.mobile-menu-overlay.active {
-    right: 0;
+.fullscreen-nav-overlay.open {
+    opacity: 1;
+    pointer-events: all;
 }
 
-.mobile-nav {
+.fullscreen-close-btn {
+    position: absolute;
+    top: 20px;
+    right: var(--container-padding);
+    background: none;
+    border: none;
+    font-size: 3.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    line-height: 1;
+    font-weight: 300;
+    z-index: 2001;
+}
+
+.fullscreen-close-btn:hover {
+    color: var(--color-magenta);
+    transform: rotate(90deg);
+}
+
+.fullscreen-nav-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    justify-content: space-between;
+    height: 70%;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
-.mobile-nav-link {
+.fullscreen-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 5vh;
+}
+
+.fs-nav-link {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 800;
     color: var(--color-text-white);
+    text-transform: lowercase;
+    letter-spacing: -2px;
     transition: var(--transition-smooth);
+    display: block;
 }
 
-.mobile-nav-link:hover {
+.fs-nav-link:hover {
     color: var(--color-magenta);
     transform: skewX(-5deg) scale(1.05);
 }
 
-/* Hamburger active state */
-.mobile-menu-btn.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    background-color: var(--color-text-white);
+.fullscreen-nav-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2vh;
 }
 
-.mobile-menu-btn.active .bar:nth-child(2) {
-    transform: rotate(-45deg);
-    background-color: var(--color-text-white);
+.fs-nav-tagline {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+.fs-nav-socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.fs-nav-socials a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-magenta);
+    transition: var(--transition-fast);
+}
+
+.fs-nav-socials a:hover {
+    color: var(--color-text-white);
 }
 
 /* ==========================================================================

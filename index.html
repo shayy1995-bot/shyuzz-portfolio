@@ -22,48 +22,47 @@
     </div>
 
     <!-- Navigation Header -->
+    <!-- Navigation Header (Idyllic Inspired Structure) -->
     <header class="main-header">
         <div class="header-container">
             <a href="#" class="logo">shyuzz studio</a>
             
-            <nav class="main-nav">
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-
-            <div class="social-links">
+            <div class="header-right">
                 <!-- Tiny integrated Devil GIF animation in Header -->
                 <div class="mini-gif-icon">
                     <img src="assets/Devil.gif" alt="Devil icon" class="header-mini-gif">
                 </div>
-                <a href="https://www.instagram.com/shyuzz.studio/" target="_blank" aria-label="Instagram">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-                    </svg>
-                </a>
-                <a href="https://www.facebook.com/shay.yuz" target="_blank" aria-label="Facebook">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
-                    </svg>
-                </a>
+                
+                <!-- Premium Fullscreen Hamburger Toggle (Visible on Desktop & Mobile) -->
+                <button class="fullscreen-hamburger" id="fullscreenHamburger" aria-label="Open Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
-            <!-- Hamburger Button for mobile -->
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    <!-- Fullscreen Mobile Menu -->
-    <div class="mobile-menu-overlay">
-        <nav class="mobile-nav">
-            <a href="#work" class="mobile-nav-link">Work</a>
-            <a href="#about" class="mobile-nav-link">About</a>
-            <a href="#contact" class="mobile-nav-link">Contact</a>
-        </nav>
+    <!-- Fullscreen Navigation Overlay (Idyllic Style) -->
+    <div class="fullscreen-nav-overlay" id="fullscreenNavOverlay" aria-hidden="true">
+        <!-- Close button inside overlay -->
+        <button class="fullscreen-close-btn" id="fullscreenCloseBtn" aria-label="Close menu">&times;</button>
+        
+        <div class="fullscreen-nav-inner">
+            <ul class="fullscreen-nav-list">
+                <li class="nav-item"><a href="#" class="fs-nav-link">home</a></li>
+                <li class="nav-item"><a href="#work" class="fs-nav-link">work</a></li>
+                <li class="nav-item"><a href="#about" class="fs-nav-link">about</a></li>
+                <li class="nav-item"><a href="#contact" class="fs-nav-link">contact</a></li>
+            </ul>
+            <div class="fullscreen-nav-footer">
+                <p class="fs-nav-tagline">Disruptive Brand & Graphic Design</p>
+                <div class="fs-nav-socials">
+                    <a href="https://www.instagram.com/shyuzz.studio/" target="_blank">Instagram</a>
+                    <a href="mailto:hello@shyuzzstudio.com">Email</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Main Container -->
