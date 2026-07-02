@@ -593,18 +593,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Header scroll background effect (adds 'scrolled' class when page is scrolled)
+    // Smart revealing header scroll handler (inspired by Idyllic)
     const header = document.querySelector('.main-header');
     if (header) {
-        const toggleHeaderBackground = () => {
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 80;
+
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > scrollThreshold) {
+                if (currentScrollY > lastScrollY) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
             } else {
-                header.classList.remove('scrolled');
+                header.classList.remove('header-hidden');
             }
+            
+            lastScrollY = currentScrollY;
         };
-        window.addEventListener('scroll', toggleHeaderBackground);
-        toggleHeaderBackground(); // Run initially in case page loaded scrolled
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
     }
 
     // Scroll-activated environmental background color switcher
