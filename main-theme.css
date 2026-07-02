@@ -4,20 +4,20 @@
 
 /* Variables & Tokens */
 :root {
-    --color-bg: #0b0b0d; /* Deep premium charcoal black initially */
-    --color-text: #fffbf0; /* Warm soft cream initially */
-    --color-text-muted: #a69f98; /* Muted soft grey-cream */
+    --color-bg: #020203; /* Pure brutalist black background */
+    --color-text: #fffbf0; /* Warm soft cream */
+    --color-text-muted: #a69f98; /* Muted warm grey-cream */
     --color-text-white: #ffffff;
     
-    /* Shyuzz Brand Palette */
-    --color-magenta: #ff9ebb; /* Brand Pink */
-    --color-green: #099247; /* Brand Green */
-    --color-yellow: #f9c80e; /* Brand Yellow */
-    --color-blue: #003087; /* Brand Blue */
-    --color-cream: #fffbf0; /* Brand Cream */
-    --color-red: #e41b23; /* Brand Red */
-    --color-card-bg: #141417; /* Card background is dark charcoal in dark mode */
-    --color-grey-light: #1d1d24;
+    /* Shyuzz Brutalist Brand Palette */
+    --color-magenta: #FF66D9; /* Neon Hot Pink */
+    --color-green: #00E56D; /* Neon Green */
+    --color-yellow: #FEFF00; /* Neon Yellow */
+    --color-blue: #73E6F1; /* Neon Cyan */
+    --color-cream: #fffbf0;
+    --color-red: #FF66D9; /* Map red to neon pink */
+    --color-card-bg: #0c0c0e; /* Dark card background */
+    --color-grey-light: #161619;
     
     /* Fonts */
     --font-display: 'Syne', sans-serif;
@@ -1698,26 +1698,14 @@ a {
 }
 
 /* ==========================================================================
-   Brand Color Palette Overrides (Adapted for Premium Dark Mode)
+   Brutalist Dark Mode Overrides (Vibrant Neon Accents on Pure Black)
    ========================================================================== */
-
-/* 1. Hero Section (Panel 1: Deep Charcoal Background, Green grid lines, Pink text) */
-.scroll-color-panel[data-bg-color="#0b0b0d"] {
-    background-color: #0b0b0d !important;
+.scroll-color-panel[data-bg-color="#020203"] {
+    background-color: #020203 !important;
+    color: var(--color-cream);
 }
 
-.hero-grid-overlay {
-    background-color: #0b0b0d !important; /* Dark bg */
-    background-image: 
-        linear-gradient(to right, rgba(9, 146, 71, 0.25) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(9, 146, 71, 0.25) 1.5px, transparent 1.5px) !important; /* Subtle green grid lines */
-}
-
-.hero-title {
-    color: var(--color-magenta) !important; /* Glowing brand pink title on dark */
-}
-
-/* 2. Header & Nav links (White for crisp contrast in dark mode) */
+/* 1. Header & Navigation (White and Magenta) */
 .logo {
     color: #ffffff !important;
 }
@@ -1725,138 +1713,183 @@ a {
     color: #ffffff !important;
 }
 .nav-link::after {
-    background-color: var(--color-magenta) !important; /* Pink hover line */
+    background-color: var(--color-magenta) !important;
 }
 .social-link svg {
     fill: #ffffff !important;
 }
 
-/* 3. Panel 2 (Manifesto/Story - Deep Forest Green-Black Background, Cream/Pink text) */
-.scroll-color-panel[data-bg-color="#07170e"] {
-    background-color: #07170e !important;
-    color: var(--color-cream);
-}
-.scroll-color-panel[data-bg-color="#07170e"] .story-tag {
-    color: var(--color-green) !important; /* Green tag accent */
-}
-.scroll-color-panel[data-bg-color="#07170e"] .story-title-highlight {
-    color: var(--color-magenta) !important; /* Pink headings */
-}
-.scroll-color-panel[data-bg-color="#07170e"] .reveal-paragraph {
-    color: rgba(255, 251, 240, 0.8) !important; /* Soft cream readability */
-}
-.scroll-color-panel[data-bg-color="#07170e"] .massive-text {
-    color: var(--color-cream) !important;
-}
-.scroll-color-panel[data-bg-color="#07170e"] .magnificent-text {
-    color: var(--color-magenta) !important; /* Pink styled serif tags */
+/* 2. Hero Section */
+.hero-grid-overlay {
+    background-color: #020203 !important; /* Pure Black bg */
+    background-image: 
+        linear-gradient(to right, rgba(255, 102, 217, 0.22) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(255, 102, 217, 0.22) 1.5px, transparent 1.5px) !important; /* Neon pink grid lines */
 }
 
-/* 4. Panel 3 (Work Case Studies - Deep Navy-Black Background, White text, Green accents) */
-.scroll-color-panel[data-bg-color="#050e18"] {
-    background-color: #050e18 !important;
-    color: #ffffff;
+.hero-title {
+    color: var(--color-green) !important; /* Neon Green title like the reference poster */
 }
-.scroll-color-panel[data-bg-color="#050e18"] .section-title {
+
+.hero-rotating-badge {
+    background-color: #ffffff !important; /* Pure white badge background like the white tilted sticker */
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(255, 102, 217, 0.3) !important;
+}
+.badge-text {
+    fill: #020203 !important; /* Black text on white sticker */
+    font-weight: 800;
+}
+.badge-play-icon {
+    fill: #020203 !important; /* Black play icon */
+}
+
+/* 2.1 Top Marquee */
+.top-marquee-section {
+    background: #020203 !important;
+    border-top: 2px solid var(--color-magenta) !important;
+    border-bottom: 2px solid var(--color-magenta) !important;
+}
+.top-marquee-inner {
+    color: var(--color-yellow) !important; /* Neon yellow marquee text */
+    font-weight: 800;
+}
+
+/* 3. Story & Manifesto Section */
+.story-fixed-scroll-section {
+    border-bottom: 2px solid rgba(255, 102, 217, 0.15) !important;
+}
+.story-tag {
+    color: var(--color-blue) !important; /* Neon Cyan tag */
+}
+.story-title-highlight {
+    color: var(--color-yellow) !important; /* Neon Yellow heading */
+}
+.reveal-paragraph {
+    color: rgba(255, 255, 255, 0.85) !important; /* White body paragraphs */
+}
+.massive-text {
     color: #ffffff !important;
 }
-.scroll-color-panel[data-bg-color="#050e18"] .filter-btn {
+.magnificent-text {
+    color: var(--color-magenta) !important; /* Neon Pink serif emphasis */
+}
+
+/* 4. Projects Showcase (Work) Section */
+.work-section {
+    background-color: #020203 !important;
+}
+.work-section .section-title {
+    color: var(--color-blue) !important; /* Neon Cyan */
+}
+.work-section .filter-btn {
     color: #ffffff !important;
     border-color: rgba(255, 255, 255, 0.2) !important;
+    background: transparent !important;
 }
-.scroll-color-panel[data-bg-color="#050e18"] .filter-btn.active {
-    background-color: var(--color-green) !important;
+.work-section .filter-btn.active {
+    background-color: var(--color-magenta) !important; /* Neon Pink background */
+    color: #020203 !important; /* Black text */
+    border-color: var(--color-magenta) !important;
+    font-weight: 800;
+}
+.project-block {
+    background-color: #0c0c0e !important; /* Deepest grey card */
+    border: 1px solid rgba(255, 102, 217, 0.1) !important;
+}
+.project-tag {
+    color: var(--color-green) !important; /* Neon Green project tag */
+}
+.project-title {
     color: #ffffff !important;
-    border-color: var(--color-green) !important;
 }
-.scroll-color-panel[data-bg-color="#050e18"] .project-tag {
-    color: var(--color-magenta) !important; /* Pink tags on dark cards */
-}
-.scroll-color-panel[data-bg-color="#050e18"] .project-title {
-    color: #ffffff !important;
-}
-.scroll-color-panel[data-bg-color="#050e18"] .project-desc {
+.project-desc {
     color: #a69f98 !important;
 }
-.scroll-color-panel[data-bg-color="#050e18"] .project-details-layout {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-.scroll-color-panel[data-bg-color="#050e18"] .project-block {
-    background-color: #0c1724 !important; /* Dark blue-card background */
-    border: 1px solid rgba(255, 255, 255, 0.03);
+.project-details-layout {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* 5. Panel 4 (About Section - Deep Plum-Black Background, Pink & Cream text) */
-.scroll-color-panel[data-bg-color="#16080d"] {
-    background-color: #16080d !important;
-    color: var(--color-cream);
+/* 5. About Section */
+.about-badge {
+    color: var(--color-blue) !important; /* Cyan badge */
+    background-color: rgba(115, 230, 241, 0.1) !important;
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-badge {
-    color: var(--color-magenta) !important;
-    background-color: rgba(255, 158, 187, 0.1) !important;
+.about-title {
+    color: var(--color-magenta) !important; /* Neon Pink */
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-title {
-    color: var(--color-magenta) !important;
+.about-p {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-p {
-    color: var(--color-cream) !important;
-    opacity: 0.9;
+.about-stat-number {
+    color: var(--color-yellow) !important; /* Neon Yellow stats */
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-stat-number {
-    color: var(--color-magenta) !important;
+.about-stat-label {
+    color: #a69f98 !important;
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-stat-label {
-    color: var(--color-cream) !important;
+.about-frame-sticker {
+    background-color: var(--color-yellow) !important; /* Neon Yellow sticker */
+    color: #020203 !important; /* Black text */
+    font-weight: 800;
 }
-.scroll-color-panel[data-bg-color="#16080d"] .about-frame-sticker {
+
+/* 6. Contact & Footer Section */
+.contact-section {
+    background-color: #020203 !important;
+}
+.contact-section .marquee-wrapper {
+    background-color: #020203 !important;
+    border-top: 2px solid var(--color-green) !important;
+    border-bottom: 2px solid var(--color-green) !important;
+}
+.contact-section .marquee-content span {
+    color: var(--color-green) !important; /* Neon Green contact marquee */
+    font-weight: 800;
+}
+.contact-heading {
+    color: var(--color-blue) !important; /* Neon Cyan contact heading */
+}
+.contact-p {
+    color: #a69f98 !important;
+}
+.contact-label {
+    color: var(--color-magenta) !important; /* Neon Pink label */
+}
+.contact-link {
+    color: #ffffff !important;
+}
+.contact-link::after {
     background-color: var(--color-magenta) !important;
-    color: #16080d !important; /* Dark burgundy text on pink sticker */
 }
-
-/* 6. Panel 5 (Contact & Footer Section - Deep Charcoal Background, Cream & Green text) */
-.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-heading {
-    color: #ffffff !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-p {
+.form-label {
     color: #a69f98 !important;
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-label {
-    color: var(--color-green) !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-link {
-    color: #ffffff !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-link::after {
-    background-color: var(--color-green) !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .form-label {
-    color: #a69f98 !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input {
+.form-input {
     color: #ffffff !important;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
     background: transparent !important;
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:focus {
-    border-bottom: 2px solid var(--color-green) !important;
+.form-input:focus {
+    border-bottom: 2px solid var(--color-blue) !important; /* Cyan input focus line */
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:focus ~ .form-label,
-.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:not(:placeholder-shown) ~ .form-label {
-    color: var(--color-green) !important;
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    color: var(--color-blue) !important;
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .submit-btn {
+.submit-btn {
+    background-color: var(--color-yellow) !important; /* Neon Yellow submit button */
+    color: #020203 !important; /* Black text */
+    font-weight: 800;
+}
+.submit-btn:hover {
     background-color: var(--color-green) !important;
-    color: #ffffff !important;
+    color: #020203 !important;
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .submit-btn:hover {
-    background-color: var(--color-magenta) !important;
-    color: #120609 !important;
-}
-.scroll-color-panel[data-bg-color="#0b0b0d"] .footer-copy {
+.footer-copy {
     color: #a69f98 !important;
-    opacity: 0.6;
+    opacity: 0.5;
 }
-.scroll-color-panel[data-bg-color="#0b0b0d"] .main-footer {
+.main-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
