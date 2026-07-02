@@ -28,6 +28,14 @@
     
     /* Spacing */
     --container-padding: clamp(2rem, 5vw, 6rem);
+
+    /* Fluid Typography Scale (inspired by Idyllic) */
+    --fs-hero: clamp(5.5rem, 16vw, 15rem);
+    --fs-h2: clamp(2.5rem, 6.5vw, 5.5rem);       /* Section headings */
+    --fs-h3: clamp(1.8rem, 4.5vw, 3.2rem);       /* Sub-headings */
+    --fs-body: clamp(1.1rem, 1.8vw, 1.45rem);    /* Readable body */
+    --fs-nav: 13.5px;                            /* Navigation links */
+    --fs-footer: 13px;
 }
 
 /* Base Reset */
@@ -47,9 +55,11 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
+    font-size: var(--fs-body);
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Environmental scroll background smoothing */
 }
 
 /* Native Scrollbar Style (Fast & Smooth) */
@@ -164,7 +174,7 @@ a {
 
 .logo {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: -0.5px;
     color: var(--color-magenta);
@@ -193,8 +203,10 @@ a {
 }
 
 .nav-link {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--fs-nav);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     position: relative;
     padding: 0.5rem 0;
 }
@@ -445,14 +457,14 @@ a {
    ========================================================================== */
 .story-fixed-scroll-section {
     position: relative;
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental scroll background show */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .story-fixed-scroll-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .story-fixed-scroll-row {
@@ -463,7 +475,7 @@ a {
 
 /* Left Column: Fixed / Pinned Media container */
 .fixed-media-column {
-    width: 45%;
+    width: 50%; /* Perfect half split like Idyllic */
     height: 100vh;
     position: sticky;
     top: 0;
@@ -475,12 +487,10 @@ a {
 
 .fixed-media-wrapper {
     position: relative;
-    width: 90%;
-    aspect-ratio: 1 / 1.15;
-    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; /* Full bleed edge-to-edge layout */
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
     background-color: #000;
 }
 
@@ -516,11 +526,11 @@ a {
 
 /* Right Column: Scrollable text blocks */
 .scroll-text-column {
-    width: 55%;
+    width: 50%; /* Perfect half split like Idyllic */
     display: flex;
     flex-direction: column;
-    padding: 100px 0 100px 80px;
-    gap: 8rem; /* Keeps blocks spacious */
+    padding: 12vh 6vw; /* Generous fluid padding */
+    gap: 12vh; /* Spacious block margins */
 }
 
 .story-block {
@@ -534,21 +544,22 @@ a {
     font-weight: 700;
     color: var(--color-green);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .story-title-highlight {
-    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-    line-height: 1.1;
+    font-size: var(--fs-h2); /* Fluid title scale matching Idyllic */
+    line-height: 1.0;
     font-family: var(--font-display);
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: -2px;
     overflow: hidden;
 }
 
 .reveal-paragraph {
-    font-size: clamp(16px, 2.2vw, 22px);
+    font-size: var(--fs-body); /* Fluid body text size */
     color: var(--color-text-muted);
-    line-height: 1.55;
+    line-height: 1.5;
     font-weight: 400;
     opacity: 1;
     transform: translateY(0);
@@ -560,7 +571,7 @@ a {
    ========================================================================== */
 .cutout-marquee-section {
     padding: 5% 0 10% 0; /* Matches Idyllic: var(--ym) var(--xm) calc(var(--ym)*2) */
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental background show */
     overflow: hidden;
     position: relative;
 }
@@ -741,7 +752,7 @@ a {
    ========================================================================== */
 .massive-banner-section {
     padding: 140px 0;
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental background show */
     position: relative;
     z-index: 3;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -785,7 +796,7 @@ a {
    ========================================================================== */
 #notgoodat {
     padding: 120px 0 100px 0;
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental background show */
     overflow: hidden;
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -886,7 +897,7 @@ a {
    ========================================================================== */
 .work-section {
     padding: 150px 0;
-    background-color: #0b0b0d; /* Keeping background consistent dark */
+    background-color: transparent; /* Transparent to let environmental background show */
     position: relative;
     z-index: 3;
 }
@@ -912,7 +923,7 @@ a {
     font-family: var(--font-serif);
     font-style: italic;
     font-weight: 700;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: var(--fs-h2); /* Fluid headings */
     overflow: hidden;
 }
 
@@ -1083,7 +1094,7 @@ a {
    ========================================================================== */
 .about-section {
     padding: 150px 0;
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental background show */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1115,7 +1126,7 @@ a {
 }
 
 .about-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: var(--fs-h2); /* Fluid headings */
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
@@ -1215,7 +1226,7 @@ a {
    ========================================================================== */
 .contact-section {
     padding: 100px 0 0 0;
-    background-color: var(--color-bg);
+    background-color: transparent; /* Transparent to let environmental background show */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
 }

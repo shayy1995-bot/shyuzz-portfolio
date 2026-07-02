@@ -606,4 +606,21 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', toggleHeaderBackground);
         toggleHeaderBackground(); // Run initially in case page loaded scrolled
     }
+
+    // Scroll-activated environmental background color switcher
+    const panels = document.querySelectorAll('.scroll-color-panel');
+    panels.forEach((panel) => {
+        const bgColor = panel.getAttribute('data-bg-color');
+        ScrollTrigger.create({
+            trigger: panel,
+            start: 'top 50%',
+            end: 'bottom 50%',
+            onEnter: () => {
+                document.body.style.backgroundColor = bgColor;
+            },
+            onEnterBack: () => {
+                document.body.style.backgroundColor = bgColor;
+            }
+        });
+    });
 });
