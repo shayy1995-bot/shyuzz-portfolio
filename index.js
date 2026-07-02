@@ -147,48 +147,34 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.to(cursor, { opacity: 1, duration: 0.3 });
     });
 
-    // 3. Premium Fullscreen Hamburger Navigation (Inspired by Idyllic)
-    const hamburger = document.getElementById('fullscreenHamburger');
-    const closeBtn = document.getElementById('fullscreenCloseBtn');
-    const overlay = document.getElementById('fullscreenNavOverlay');
-    const overlayLinks = document.querySelectorAll('.fs-nav-link');
+    // 3. Hamburger Menu Toggle (Native Scroll)
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const menuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-    const openMenu = () => {
-        hamburger.classList.add('active');
-        overlay.classList.add('open');
-        overlay.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-
-        // Animate navigation items inside the overlay
-        gsap.fromTo(overlayLinks, 
-            { opacity: 0, y: 50, rotate: 3 }, 
-            { opacity: 1, y: 0, rotate: 0, stagger: 0.1, duration: 0.8, ease: 'power4.out', delay: 0.2 }
-        );
-        gsap.fromTo('.fs-nav-tagline, .fs-nav-socials a',
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, stagger: 0.1, duration: 0.6, ease: 'power3.out', delay: 0.5 }
-        );
-    };
-
-    const closeMenu = () => {
-        hamburger.classList.remove('active');
-        overlay.classList.remove('open');
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    };
-
-    hamburger.addEventListener('click', () => {
-        if (overlay.classList.contains('open')) {
-            closeMenu();
+    const toggleMenu = () => {
+        menuBtn.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        
+        if (menuOverlay.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+            gsap.fromTo(mobileLinks, 
+                { opacity: 0, y: 30, skewY: 5 }, 
+                { opacity: 1, y: 0, skewY: 0, stagger: 0.1, duration: 0.6, ease: 'power4.out', delay: 0.3 }
+            );
         } else {
-            openMenu();
+            document.body.style.overflow = 'auto';
         }
-    });
+    };
 
-    closeBtn.addEventListener('click', closeMenu);
-
-    overlayLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
+    menuBtn.addEventListener('click', toggleMenu);
+    
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuBtn.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
     });
 
     // 4. Hero Section Animations (Text & Sticker)
