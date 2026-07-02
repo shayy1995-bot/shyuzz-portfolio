@@ -379,8 +379,9 @@ a {
 .hero-title {
     font-family: 'Syne', 'Outfit', sans-serif;
     font-size: clamp(5rem, 15.5vw, 15rem); /* Extremely massive scale to occupy the entire screen height like Idyllic */
-    line-height: 0.8;
+    line-height: 0.72; /* Tightened to accommodate the vertical stretch */
     text-transform: uppercase;
+    margin-top: 45px; /* Offset to keep clear of the top header */
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -389,6 +390,9 @@ a {
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
     letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
+    transform: scaleY(1.35); /* Stretches the font vertically to occupy the frame height without widening it */
+    transform-origin: center center;
+    will-change: transform;
 }
 
 .title-line {
