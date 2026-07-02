@@ -336,13 +336,16 @@ a {
    Hero Section
    ========================================================================== */
 .hero-section {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 100px;
+    padding-top: 80px; /* Offset exactly below the header */
+    padding-bottom: 50px; /* Bottom safety margin above the ticker */
     overflow: hidden;
     background-color: #0b0b0d; /* Fallback */
+    box-sizing: border-box;
 }
 
 /* Wavy grid background pattern (Pink with Dark Red/Magenta lines) with organic displacement warping */
@@ -364,6 +367,7 @@ a {
 
 .hero-container {
     width: 100%;
+    height: 100%; /* Fill container height to allow perfect centering */
     max-width: 100%; /* Full bleed layout to let title stretch edge-to-edge without cuts */
     margin: 0;
     padding: 0 var(--container-padding);
@@ -374,14 +378,15 @@ a {
     align-items: center; /* Horizontally center contents */
     justify-content: center; /* Vertically center contents */
     text-align: center;
+    box-sizing: border-box;
 }
 
 .hero-title {
     font-family: 'Syne', 'Outfit', sans-serif;
-    font-size: clamp(5rem, 15.5vw, 15rem); /* Extremely massive scale to occupy the entire screen height like Idyllic */
+    font-size: clamp(4.5rem, 14.2vw, 13.2rem); /* Dynamic scale constrained exactly inside the top and bottom layout boundaries */
     line-height: 0.72; /* Tightened to accommodate the vertical stretch */
     text-transform: uppercase;
-    margin-top: 45px; /* Offset to keep clear of the top header */
+    margin-top: 0; /* Centered vertically via flexbox, preventing overflow against the header */
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -400,14 +405,14 @@ a {
     overflow: hidden;
 }
 
-/* Custom rotating circular badge with the new tagline */
+/* Custom rotating circular badge with the new tagline, scaled down and positioned inside the letter 'O' of 'STUDIO' */
 .hero-rotating-badge {
     position: absolute;
-    width: clamp(110px, 16vw, 170px);
-    height: clamp(110px, 16vw, 170px);
+    width: clamp(90px, 9vw, 125px); /* Scaled down to fit perfectly inside the hole of the letter O */
+    height: clamp(90px, 9vw, 125px);
     z-index: 3;
-    right: 20%;
-    top: 45%;
+    right: 16.5%; /* Positioned horizontally exactly in the center of the letter O */
+    top: 56.5%; /* Positioned vertically inside the second line of text (STUDIO) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -415,7 +420,7 @@ a {
     background-color: #ffffff; /* Solid white background sticker as requested */
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 8px; /* Safe rotation padding */
+    padding: 6px; /* Safe rotation padding */
 }
 
 .badge-svg {
