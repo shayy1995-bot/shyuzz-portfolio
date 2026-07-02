@@ -384,7 +384,7 @@ a {
 .hero-title {
     font-family: 'Syne', 'Outfit', sans-serif;
     font-size: clamp(4.5rem, 14.2vw, 13.2rem); /* Dynamic scale constrained exactly inside the top and bottom layout boundaries */
-    line-height: 0.63; /* Tightened to accommodate the 1.8x vertical stretch for a compact block */
+    line-height: 0.72; /* Tightened to accommodate the vertical stretch */
     text-transform: uppercase;
     margin-top: 0; /* Centered vertically via flexbox, preventing overflow against the header */
     margin-bottom: 0;
@@ -395,7 +395,7 @@ a {
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
     letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
-    transform: scaleY(1.8); /* Massively stretches the font vertically to reach the upper/lower bounds like Idyllic */
+    transform: scaleY(1.35); /* Stretches the font vertically to occupy the frame height without widening it */
     transform-origin: center center;
     will-change: transform;
 }
