@@ -371,16 +371,21 @@ a {
     z-index: 2;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Horizontally center contents */
+    justify-content: center; /* Vertically center contents */
+    text-align: center;
 }
 
 .hero-title {
     font-family: 'Syne', 'Outfit', sans-serif;
-    font-size: clamp(4rem, 12.5vw, 12.5rem); /* Dynamic fluid sizing to fill viewport without overflow */
-    line-height: 0.82;
+    font-size: clamp(5rem, 15.5vw, 15rem); /* Extremely massive scale to occupy the entire screen height like Idyllic */
+    line-height: 0.8;
     text-transform: uppercase;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center each text line */
+    text-align: center;
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
     letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
