@@ -179,7 +179,7 @@ a {
     font-size: 22px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: var(--color-magenta);
+    color: #ffffff; /* White logo matching Idyllic */
     text-transform: lowercase;
     position: relative;
 }
@@ -364,8 +364,8 @@ a {
 
 .hero-container {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 100%; /* Full bleed layout to let title stretch edge-to-edge without cuts */
+    margin: 0;
     padding: 0 var(--container-padding);
     position: relative;
     z-index: 2;
@@ -375,15 +375,15 @@ a {
 
 .hero-title {
     font-family: 'Syne', 'Outfit', sans-serif;
-    font-size: clamp(5.5rem, 16vw, 15rem); /* Extremely massive text as requested */
-    line-height: 0.8;
+    font-size: clamp(4rem, 12.5vw, 12.5rem); /* Dynamic fluid sizing to fill viewport without overflow */
+    line-height: 0.82;
     text-transform: uppercase;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
-    letter-spacing: -3px; /* Extra tight tracking for editorial look */
+    letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
 }
 
 .title-line {
@@ -403,6 +403,10 @@ a {
     justify-content: center;
     align-items: center;
     pointer-events: auto;
+    background-color: #ffffff; /* Solid white background sticker as requested */
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 8px; /* Safe rotation padding */
 }
 
 .badge-svg {
