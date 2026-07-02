@@ -4,7 +4,7 @@
 
 /* Variables & Tokens */
 :root {
-    --color-bg: #020203; /* Pure brutalist black background */
+    --color-bg: #00E56D; /* Initial brand green background */
     --color-text: #fffbf0; /* Warm soft cream */
     --color-text-muted: #a69f98; /* Muted warm grey-cream */
     --color-text-white: #ffffff;
@@ -1724,16 +1724,20 @@ a {
     fill: #ffffff !important;
 }
 
-/* 2. Hero Section */
+/* 2. Hero Section (Green background, Blue grid lines, Pink title) */
+.scroll-color-panel[data-bg-color="#00E56D"] {
+    background-color: #00E56D !important;
+}
+
 .hero-grid-overlay {
-    background-color: #020203 !important; /* Pure Black bg */
+    background-color: #00E56D !important; /* Brand Green bg */
     background-image: 
-        linear-gradient(to right, rgba(255, 102, 217, 0.22) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(255, 102, 217, 0.22) 1.5px, transparent 1.5px) !important; /* Neon pink grid lines */
+        linear-gradient(to right, rgba(0, 48, 135, 0.35) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(0, 48, 135, 0.35) 1.5px, transparent 1.5px) !important; /* Vibrant Blue grid lines */
 }
 
 .hero-title {
-    color: var(--color-green) !important; /* Neon Green title like the reference poster */
+    color: var(--color-magenta) !important; /* Neon Pink title */
 }
 
 .hero-rotating-badge {
