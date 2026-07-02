@@ -4,9 +4,9 @@
 
 /* Variables & Tokens */
 :root {
-    --color-bg: #ff9ebb; /* Vibrant brand pink initially */
-    --color-text: #099247; /* Vibrant brand green initially */
-    --color-text-muted: #1c060d; /* High contrast dark red burgundy */
+    --color-bg: #0b0b0d; /* Deep premium charcoal black initially */
+    --color-text: #fffbf0; /* Warm soft cream initially */
+    --color-text-muted: #a69f98; /* Muted soft grey-cream */
     --color-text-white: #ffffff;
     
     /* Shyuzz Brand Palette */
@@ -16,8 +16,8 @@
     --color-blue: #003087; /* Brand Blue */
     --color-cream: #fffbf0; /* Brand Cream */
     --color-red: #e41b23; /* Brand Red */
-    --color-card-bg: #fffbf0; /* Card background matches cream */
-    --color-grey-light: #fffbf0;
+    --color-card-bg: #141417; /* Card background is dark charcoal in dark mode */
+    --color-grey-light: #1d1d24;
     
     /* Fonts */
     --font-display: 'Syne', sans-serif;
@@ -1698,149 +1698,165 @@ a {
 }
 
 /* ==========================================================================
-   Brand Color Palette Overrides (Pink & Green Main Identity)
+   Brand Color Palette Overrides (Adapted for Premium Dark Mode)
    ========================================================================== */
 
-/* 1. Hero Section (Panel 1: Pink Background, Green lines, Green text) */
+/* 1. Hero Section (Panel 1: Deep Charcoal Background, Green grid lines, Pink text) */
+.scroll-color-panel[data-bg-color="#0b0b0d"] {
+    background-color: #0b0b0d !important;
+}
+
 .hero-grid-overlay {
-    background-color: var(--color-magenta) !important; /* Pink bg */
+    background-color: #0b0b0d !important; /* Dark bg */
     background-image: 
-        linear-gradient(to right, var(--color-green) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, var(--color-green) 1.5px, transparent 1.5px) !important; /* Green lines */
+        linear-gradient(to right, rgba(9, 146, 71, 0.25) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(9, 146, 71, 0.25) 1.5px, transparent 1.5px) !important; /* Subtle green grid lines */
 }
 
 .hero-title {
-    color: var(--color-green) !important; /* Green text on pink */
+    color: var(--color-magenta) !important; /* Glowing brand pink title on dark */
 }
 
-/* 2. Header & Nav links (White / Off-white for high contrast and modern look) */
+/* 2. Header & Nav links (White for crisp contrast in dark mode) */
 .logo {
-    color: #ffffff !important; /* White logo as requested */
-}
-.nav-link {
-    color: #ffffff !important; /* White nav links */
-}
-.nav-link::after {
-    background-color: var(--color-yellow) !important; /* Yellow hover line for sass */
-}
-.social-link svg {
-    fill: #ffffff !important; /* White social icons */
-}
-
-/* 3. Panel 2 (Manifesto/Story - Brand Green Background, Cream text) */
-.scroll-color-panel[data-bg-color="#099247"] {
-    color: var(--color-cream);
-}
-.scroll-color-panel[data-bg-color="#099247"] .story-tag {
-    color: var(--color-yellow) !important; /* Gold tag for editorial accent */
-}
-.scroll-color-panel[data-bg-color="#099247"] .story-title-highlight {
-    color: var(--color-cream) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .reveal-paragraph {
-    color: rgba(255, 251, 240, 0.8) !important; /* Soft cream */
-}
-.scroll-color-panel[data-bg-color="#099247"] .massive-text {
-    color: var(--color-cream) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .magnificent-text {
-    color: var(--color-yellow) !important; /* Yellow text for attitude & sass */
-}
-
-/* 4. Panel 3 (Work Case Studies - Brand Cream Background, Blue text/lines) */
-.scroll-color-panel[data-bg-color="#fffbf0"] {
-    color: var(--color-blue);
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .section-title {
-    color: var(--color-blue) !important;
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .filter-btn {
-    color: var(--color-blue) !important;
-    border-color: rgba(0, 48, 135, 0.2) !important;
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .filter-btn.active {
-    background-color: var(--color-blue) !important;
-    color: var(--color-cream) !important;
-    border-color: var(--color-blue) !important;
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .project-tag {
-    color: var(--color-red) !important; /* Red tag for pop */
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .project-title {
-    color: var(--color-blue) !important;
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .project-desc {
-    color: rgba(0, 48, 135, 0.8) !important;
-}
-.scroll-color-panel[data-bg-color="#fffbf0"] .project-details-layout {
-    border-top: 1px solid rgba(0, 48, 135, 0.15) !important;
-}
-
-/* 5. Panel 4 (About Section - Brand Pink Background, Red text) */
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-badge {
-    color: var(--color-red) !important;
-    background-color: rgba(228, 27, 35, 0.1) !important;
-}
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-title {
-    color: var(--color-red) !important;
-}
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-p {
-    color: var(--color-red) !important;
-    opacity: 0.85;
-}
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-stat-number {
-    color: var(--color-red) !important;
-}
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-stat-label {
-    color: var(--color-red) !important;
-}
-.scroll-color-panel[data-bg-color="#ff9ebb"] .about-frame-sticker {
-    background-color: var(--color-red) !important;
-    color: var(--color-magenta) !important; /* Pink text on red sticker */
-}
-
-/* 6. Panel 5 (Contact & Footer Section - Brand Green Background, Cream text) */
-.scroll-color-panel[data-bg-color="#099247"] .contact-heading {
-    color: var(--color-cream) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .contact-p {
-    color: rgba(255, 251, 240, 0.8) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .contact-label {
-    color: var(--color-yellow) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .contact-link {
-    color: var(--color-cream) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .contact-link::after {
-    background-color: var(--color-yellow) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .form-label {
-    color: rgba(255, 251, 240, 0.7) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .form-input {
-    color: var(--color-cream) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .form-input:focus {
-    border-bottom: 2px solid var(--color-yellow) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .form-input:focus ~ .form-label,
-.scroll-color-panel[data-bg-color="#099247"] .form-input:not(:placeholder-shown) ~ .form-label {
-    color: var(--color-yellow) !important;
-}
-.scroll-color-panel[data-bg-color="#099247"] .submit-btn {
-    background-color: var(--color-yellow) !important;
-    color: #1c060d !important; /* Dark text for contrast */
-}
-.scroll-color-panel[data-bg-color="#099247"] .submit-btn:hover {
-    background-color: var(--color-red) !important;
     color: #ffffff !important;
 }
-.scroll-color-panel[data-bg-color="#099247"] .footer-copy {
-    color: rgba(255, 251, 240, 0.5) !important;
+.nav-link {
+    color: #ffffff !important;
 }
-.scroll-color-panel[data-bg-color="#099247"] .main-footer {
+.nav-link::after {
+    background-color: var(--color-magenta) !important; /* Pink hover line */
+}
+.social-link svg {
+    fill: #ffffff !important;
+}
+
+/* 3. Panel 2 (Manifesto/Story - Deep Forest Green-Black Background, Cream/Pink text) */
+.scroll-color-panel[data-bg-color="#07170e"] {
+    background-color: #07170e !important;
+    color: var(--color-cream);
+}
+.scroll-color-panel[data-bg-color="#07170e"] .story-tag {
+    color: var(--color-green) !important; /* Green tag accent */
+}
+.scroll-color-panel[data-bg-color="#07170e"] .story-title-highlight {
+    color: var(--color-magenta) !important; /* Pink headings */
+}
+.scroll-color-panel[data-bg-color="#07170e"] .reveal-paragraph {
+    color: rgba(255, 251, 240, 0.8) !important; /* Soft cream readability */
+}
+.scroll-color-panel[data-bg-color="#07170e"] .massive-text {
+    color: var(--color-cream) !important;
+}
+.scroll-color-panel[data-bg-color="#07170e"] .magnificent-text {
+    color: var(--color-magenta) !important; /* Pink styled serif tags */
+}
+
+/* 4. Panel 3 (Work Case Studies - Deep Navy-Black Background, White text, Green accents) */
+.scroll-color-panel[data-bg-color="#050e18"] {
+    background-color: #050e18 !important;
+    color: #ffffff;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .section-title {
+    color: #ffffff !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .filter-btn {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .filter-btn.active {
+    background-color: var(--color-green) !important;
+    color: #ffffff !important;
+    border-color: var(--color-green) !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .project-tag {
+    color: var(--color-magenta) !important; /* Pink tags on dark cards */
+}
+.scroll-color-panel[data-bg-color="#050e18"] .project-title {
+    color: #ffffff !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .project-desc {
+    color: #a69f98 !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .project-details-layout {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.scroll-color-panel[data-bg-color="#050e18"] .project-block {
+    background-color: #0c1724 !important; /* Dark blue-card background */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* 5. Panel 4 (About Section - Deep Plum-Black Background, Pink & Cream text) */
+.scroll-color-panel[data-bg-color="#16080d"] {
+    background-color: #16080d !important;
+    color: var(--color-cream);
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-badge {
+    color: var(--color-magenta) !important;
+    background-color: rgba(255, 158, 187, 0.1) !important;
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-title {
+    color: var(--color-magenta) !important;
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-p {
+    color: var(--color-cream) !important;
+    opacity: 0.9;
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-stat-number {
+    color: var(--color-magenta) !important;
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-stat-label {
+    color: var(--color-cream) !important;
+}
+.scroll-color-panel[data-bg-color="#16080d"] .about-frame-sticker {
+    background-color: var(--color-magenta) !important;
+    color: #16080d !important; /* Dark burgundy text on pink sticker */
+}
+
+/* 6. Panel 5 (Contact & Footer Section - Deep Charcoal Background, Cream & Green text) */
+.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-heading {
+    color: #ffffff !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-p {
+    color: #a69f98 !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-label {
+    color: var(--color-green) !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-link {
+    color: #ffffff !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .contact-link::after {
+    background-color: var(--color-green) !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .form-label {
+    color: #a69f98 !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input {
+    color: #ffffff !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
+    background: transparent !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:focus {
+    border-bottom: 2px solid var(--color-green) !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:focus ~ .form-label,
+.scroll-color-panel[data-bg-color="#0b0b0d"] .form-input:not(:placeholder-shown) ~ .form-label {
+    color: var(--color-green) !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .submit-btn {
+    background-color: var(--color-green) !important;
+    color: #ffffff !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .submit-btn:hover {
+    background-color: var(--color-magenta) !important;
+    color: #120609 !important;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .footer-copy {
+    color: #a69f98 !important;
+    opacity: 0.6;
+}
+.scroll-color-panel[data-bg-color="#0b0b0d"] .main-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
