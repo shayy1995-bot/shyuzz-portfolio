@@ -384,7 +384,7 @@ a {
 .hero-title {
     font-family: 'Syne', sans-serif;
     font-size: clamp(4.5rem, 14.5vw, 14rem); /* Proportional viewport-based size matching Idyllic's logic */
-    line-height: 0.7; /* Tightened line-height for solid block composition */
+    line-height: 0.68; /* Tightened line-height for block vertical composition */
     text-transform: uppercase;
     margin-top: 0; /* Centered vertically via flexbox, preventing overflow against the header */
     margin-bottom: 0;
@@ -394,7 +394,6 @@ a {
     text-align: center;
     color: #1c060d; /* High-contrast deep dark burgundy */
     font-weight: 800;
-    letter-spacing: -0.05em; /* Tight letter-spacing for premium feel */
     transform: scaleY(1.42); /* Elegant vertical stretch matching the height bounds */
     transform-origin: center center;
     will-change: transform;
@@ -403,6 +402,18 @@ a {
 .title-line {
     display: inline-block;
     overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+/* Block alignment: justifying both lines to match the exact same left/right margins */
+.hero-title .title-line:nth-child(1) {
+    letter-spacing: -0.04em; /* Tight tracking for 'SHYUZZ' */
+}
+
+.hero-title .title-line:nth-child(2) {
+    letter-spacing: 0.125em; /* Expanded tracking to stretch 'STUDIO' to match the width of 'SHYUZZ' exactly */
+    padding-left: 0.125em; /* Offset trailing space to preserve perfect centering */
 }
 
 /* Custom rotating circular badge with the new tagline, positioned dynamically inside the letter 'O' of 'STUDIO' using viewport units */
