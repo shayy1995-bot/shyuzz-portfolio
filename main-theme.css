@@ -1673,6 +1673,13 @@ a {
         display: flex;
     }
     
+    .main-header {
+        padding: 0.6rem 1.5rem !important;
+        top: 1rem !important;
+        left: 4% !important;
+        width: 92% !important;
+    }
+    
     .hero-section {
         padding-top: 150px;
     }
