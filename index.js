@@ -574,8 +574,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Attach click events to project blocks
-    projectBlocks.forEach(block => {
+    // Attach click events to project blocks and marquee cutout items
+    const allProjectTriggers = document.querySelectorAll('.project-block, .image-marquee__item');
+    allProjectTriggers.forEach(block => {
         block.addEventListener('click', () => {
             const projectId = block.getAttribute('data-project-id');
             if (projectId) {
