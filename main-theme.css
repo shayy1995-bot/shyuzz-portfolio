@@ -810,13 +810,15 @@ a {
 
 .massive-text em,
 .magnificent-text {
-    font-family: var(--font-serif);
-    font-style: italic;
+    font-family: 'Mr Dafoe', cursive !important;
+    font-style: normal;
     color: var(--color-magenta);
-    text-transform: lowercase;
+    text-transform: none;
     font-weight: 400;
     display: inline-block;
     overflow: visible;
+    font-size: 1.25em; /* Script display pop matching Idyllic's font scale */
+    letter-spacing: normal;
 }
 
 .char-anim {
