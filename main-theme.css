@@ -1120,7 +1120,7 @@ a {
     top: 55%;
     transform: translate(-50%, -50%);
     font-family: 'Playfair Display', serif; /* Serif font matching screenshots */
-    color: #9c2b35; /* Dark crimson red matching screenshots */
+    color: var(--color-magenta); /* Brand hot pink matching screenshots style */
     font-weight: 800;
     opacity: 0;
     pointer-events: none;
@@ -1948,7 +1948,7 @@ a {
    Brutalist Dark Mode Overrides (Vibrant Neon Accents on Pure Black)
    ========================================================================== */
 .scroll-color-panel[data-bg-color="#020203"] {
-    background-color: #020203 !important;
+    background-color: transparent !important;
     color: var(--color-cream);
 }
 
