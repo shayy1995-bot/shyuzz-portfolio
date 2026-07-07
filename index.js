@@ -657,7 +657,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // =========================================================================
+    // Fixed Background "Work" Text — Show/Hide via ScrollTrigger
+    // Matches Idyllic behavior: display:none by default, display:block when 
+    // the #work section is in viewport, hidden again when scrolling past it
+    // =========================================================================
+    const workBgText = document.querySelector('.work-background-text');
+    if (workBgText) {
+        ScrollTrigger.create({
+            trigger: '#work',
+            start: 'top 80%',
+            end: 'bottom 20%',
+            onEnter: () => { workBgText.style.display = 'block'; },
+            onLeave: () => { workBgText.style.display = 'none'; },
+            onEnterBack: () => { workBgText.style.display = 'block'; },
+            onLeaveBack: () => { workBgText.style.display = 'none'; }
+        });
+    }
 
+    // =========================================================================
+    // Scroll Reveal Animations for Project Panels
+    // Each .panelc fades in and slides up from below when it enters viewport
+    // Matches Idyllic behavior: staggered entrance with smooth easing
+    // =========================================================================
+    document.querySelectorAll('.panelc:not(.extra-project)').forEach((panel) => {
+        gsap.from(panel, {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: panel,
+                start: 'top 85%',
+                end: 'top 40%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
 
 
     // Toggle Projects Button click handler (VIEW ALL / VIEW LESS)

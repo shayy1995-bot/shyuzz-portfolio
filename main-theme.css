@@ -1109,30 +1109,30 @@ a {
     line-height: 1.6;
 }
 
-/* Fixed Background Typography 'Work' */
+/* Fixed Background Typography 'Work' — Idyllic exact values */
 .work-background-text {
-    font-size: calc(120px + 24vw);
-    line-height: 100%;
+    font-size: calc(100px + 30vw); /* Idyllic: calc(100px + 30vw) */
+    line-height: calc(100px + 14vw); /* Idyllic: calc(100px + 14vw) */
     text-align: center;
     width: 100vw;
-    position: absolute; /* Set to absolute to isolate it within the #work section */
-    left: 50%;
-    top: 35%; /* Anchored at the top portion of the portfolio track */
-    transform: translate(-50%, -50%);
-    font-family: 'Playfair Display', serif; /* Serif font matching screenshots */
-    color: var(--color-magenta); /* Brand hot pink matching screenshots style */
+    position: fixed; /* FIXED — stays locked at bottom of viewport */
+    left: 0;
+    bottom: 10vw; /* Idyllic: bottom: 10vw */
+    font-family: 'Playfair Display', serif;
+    color: var(--color-magenta); /* Brand hot pink */
     font-weight: 800;
-    opacity: 0.12; /* Stationary opacity, visible only inside #work section */
+    opacity: 1;
     pointer-events: none;
     z-index: 1;
-    display: block;
+    display: none; /* Hidden by default, shown by JS when #work is in viewport */
 }
 
 /* Portsection & Panelc Layout (Idyllic Style) */
 .portsection {
     position: relative;
-    z-index: 2;
-    margin-top: 10vw;
+    min-height: 100vh; /* Idyllic: min-height: 100vh */
+    z-index: 99; /* Idyllic: z-index: 99 — ABOVE the fixed Work text */
+    margin-top: 20vw; /* Idyllic: margin-top: 20vw */
 }
 
 .portsection .row {
@@ -1164,9 +1164,8 @@ a {
 }
 
 .panelc {
-    width: 100%;
+    width: 100vw; /* Idyllic: width: 100vw */
     position: relative;
-    margin-bottom: 25vh; /* Large vertical gap between staggered items */
 }
 
 .panelc.hide {
@@ -1192,14 +1191,13 @@ a {
 }
 
 .gallery {
-    width: 38vw; /* Match Idyllic image width */
-    margin: 0;
+    width: 35vw; /* Idyllic: width: 35vw */
+    margin: 0 auto;
+    margin-top: -12vw; /* Idyllic: margin-top: -12vw — creates vertical overlap */
     position: relative;
     aspect-ratio: 1 / 1; /* Perfect 1:1 squares */
     border-radius: 0px; /* Sharp brutalist corners */
     overflow: hidden;
-    background-color: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .gallery img {
@@ -1218,7 +1216,7 @@ a {
 .panelc .project-block {
     display: flex;
     flex-direction: column;
-    width: 38vw; /* Maintain card layout matching image width */
+    width: 35vw; /* Idyllic: width: 35vw */
 }
 
 /* Custom blue ribbon VIEW ALL button */
@@ -1233,8 +1231,8 @@ a {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
-    width: 200px;
-    height: 48px;
+    width: 360px; /* Much larger — visible and prominent */
+    height: 80px;
     cursor: pointer;
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1242,7 +1240,7 @@ a {
 }
 
 .view-more-custom-btn:hover {
-    transform: scale(1.05) translateX(4px);
+    transform: scale(1.08) translateX(6px);
 }
 
 .ribbon-arrow-svg {
@@ -1252,12 +1250,12 @@ a {
 }
 
 .ribbon-path {
-    transition: fill 0.3s ease;
+    transition: fill 0.3s ease, filter 0.3s ease;
 }
 
 .view-more-custom-btn:hover .ribbon-path {
-    fill: var(--color-magenta); /* Ensure hover branding glow */
-    filter: drop-shadow(0 0 8px rgba(255, 102, 217, 0.4));
+    fill: var(--color-magenta);
+    filter: drop-shadow(0 0 12px rgba(255, 102, 217, 0.5));
 }
 
 /* Testimonials / Kind Words Section & Swimming Duck */
@@ -1947,7 +1945,7 @@ a {
    Brutalist Dark Mode Overrides (Vibrant Neon Accents on Pure Black)
    ========================================================================== */
 .scroll-color-panel[data-bg-color="#020203"] {
-    background-color: transparent !important;
+    background-color: #020203 !important;
     color: var(--color-cream);
 }
 
