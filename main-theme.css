@@ -938,7 +938,8 @@ a {
     z-index: 3;
 }
 
-.work-container {
+.work-container,
+.work-header-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--container-padding);
@@ -1119,7 +1120,7 @@ a {
     left: 0;
     bottom: 10vw; /* Idyllic: bottom: 10vw */
     font-family: 'Playfair Display', serif;
-    color: var(--color-magenta); /* Brand hot pink */
+    color: #c03441; /* Exact crimson red from idyllic.co.nz */
     font-weight: 800;
     opacity: 1;
     pointer-events: none;
@@ -1130,6 +1131,8 @@ a {
 /* Portsection & Panelc Layout (Idyllic Style) */
 .portsection {
     position: relative;
+    width: 100vw;
+    overflow-x: hidden;
     min-height: 100vh; /* Idyllic: min-height: 100vh */
     z-index: 99; /* Idyllic: z-index: 99 — ABOVE the fixed Work text */
     margin-top: 20vw; /* Idyllic: margin-top: 20vw */
@@ -1915,10 +1918,12 @@ a {
         margin-top: 4rem;
     }
     .panelc {
+        width: 100% !important;
         margin-bottom: 6rem;
     }
     .gallery {
         width: 100% !important;
+        margin-top: 0 !important; /* Reset vertical overlap on mobile */
     }
     .panelc .project-block {
         width: 100% !important;

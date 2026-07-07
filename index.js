@@ -658,41 +658,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     // =========================================================================
-    // Fixed Background "Work" Text — Show/Hide via ScrollTrigger
-    // Matches Idyllic behavior: display:none by default, display:block when 
-    // the #work section is in viewport, hidden again when scrolling past it
+    // Fixed Background "Work" Text — Show/Hide scroll handler
+    // Matches Idyllic behavior: fadeIn when scroll is between .workon and .workoff
     // =========================================================================
     const workBgText = document.querySelector('.work-background-text');
-    if (workBgText) {
-        ScrollTrigger.create({
-            trigger: '#work',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            onEnter: () => { workBgText.style.display = 'block'; },
-            onLeave: () => { workBgText.style.display = 'none'; },
-            onEnterBack: () => { workBgText.style.display = 'block'; },
-            onLeaveBack: () => { workBgText.style.display = 'none'; }
+    const workon = document.querySelector('.workon');
+    const workoff = document.querySelector('.workoff');
+    
+    if (workBgText && workon && workoff) {
+        gsap.set(workBgText, { display: 'none', opacity: 0 });
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            
+            const workonTop = workon.getBoundingClientRect().top + scrollTop;
+            const workoffTop = workoff.getBoundingClientRect().top + scrollTop;
+            
+            if (scrollTop > (workonTop - windowHeight / 2) && scrollTop < (workoffTop - windowHeight / 2)) {
+                gsap.to(workBgText, { display: 'block', opacity: 0.4, duration: 0.5, overwrite: 'auto' });
+            } else {
+                gsap.to(workBgText, { 
+                    opacity: 0, 
+                    duration: 0.4, 
+                    overwrite: 'auto', 
+                    onComplete: () => {
+                        workBgText.style.display = 'none';
+                    }
+                });
+            }
         });
     }
 
     // =========================================================================
     // Scroll Reveal Animations for Project Panels
-    // Each .panelc fades in and slides up from below when it enters viewport
-    // Matches Idyllic behavior: staggered entrance with smooth easing
+    // Matches Idyllic behavior: each gallery item fades and slides up on scroll
     // =========================================================================
-    document.querySelectorAll('.panelc:not(.extra-project)').forEach((panel) => {
-        gsap.from(panel, {
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: panel,
-                start: 'top 85%',
-                end: 'top 40%',
-                toggleActions: 'play none none reverse'
-            }
-        });
+    document.querySelectorAll('.panelc').forEach((panel) => {
+        const galleryWrap = panel.querySelector('.gallery-wrap');
+        if (galleryWrap) {
+            gsap.fromTo(galleryWrap, 
+                { opacity: 0, y: 100 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: panel,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        }
     });
 
 
