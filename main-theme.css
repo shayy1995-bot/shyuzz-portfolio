@@ -1115,18 +1115,17 @@ a {
     line-height: 100%;
     text-align: center;
     width: 100vw;
-    position: fixed;
+    position: absolute; /* Set to absolute to isolate it within the #work section */
     left: 50%;
-    top: 55%;
+    top: 35%; /* Anchored at the top portion of the portfolio track */
     transform: translate(-50%, -50%);
     font-family: 'Playfair Display', serif; /* Serif font matching screenshots */
     color: var(--color-magenta); /* Brand hot pink matching screenshots style */
     font-weight: 800;
-    opacity: 0;
+    opacity: 0.12; /* Stationary opacity, visible only inside #work section */
     pointer-events: none;
     z-index: 1;
     display: block;
-    will-change: opacity;
 }
 
 /* Portsection & Panelc Layout (Idyllic Style) */

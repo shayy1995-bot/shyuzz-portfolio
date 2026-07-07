@@ -658,22 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Fixed Background "Work" Text Fade-in/out ScrollTrigger
-    if (document.querySelector('.work-background-text')) {
-        gsap.fromTo('.work-background-text',
-            { opacity: 0 },
-            {
-                opacity: 0.15, // Prominent serif background opacity matching screenshots
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '#work',
-                    start: 'top 30%',
-                    end: 'bottom 70%',
-                    toggleActions: 'play reverse play reverse'
-                }
-            }
-        );
-    }
+
 
     // Toggle Projects Button click handler (VIEW ALL / VIEW LESS)
     const toggleBtn = document.getElementById('toggle-projects-btn');
