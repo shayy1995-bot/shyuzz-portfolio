@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
     
     <!-- CSS Style -->
-    <link rel="stylesheet" href="main-theme.css?v=4.3">
+    <link rel="stylesheet" href="main-theme.css?v=4.4">
 </head>
 <body>
 
@@ -424,12 +424,20 @@
                     <!-- Custom Decorative Ribbon VIEW ALL button (Idyllic Style) -->
                     <div class="view-more-btn-container">
                         <button class="view-more-custom-btn" id="toggle-projects-btn">
-                            <span class="btn-text">VIEW ALL</span>
-                            <span class="btn-arrow">
-                                <svg viewBox="0 0 32 16" class="arrow-svg">
-                                    <path d="M 0,8 H 28 M 24,3 L 29,8 L 24,13" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
+                            <svg viewBox="0 0 200 48" class="ribbon-arrow-svg">
+                                <path class="ribbon-path" d="M 16 8 L 155 8 C 158 8, 159 6, 161 4 L 163 10 L 165 4 C 167 6, 168 8, 171 8 L 175 8 L 167 18 L 189 24 L 167 30 L 175 40 L 171 40 C 168 40, 167 42, 165 44 L 163 38 L 161 44 C 159 42, 158 40, 155 40 L 16 40 L 26 24 Z" 
+                                      fill="var(--color-magenta)" 
+                                      stroke="var(--color-bg)" 
+                                      stroke-width="2.5" 
+                                      stroke-linejoin="round"/>
+                                <text class="ribbon-text" x="86" y="29" 
+                                      font-family="'Playfair Display', serif" 
+                                      font-size="12" 
+                                      font-weight="800" 
+                                      fill="var(--color-bg)" 
+                                      text-anchor="middle" 
+                                      letter-spacing="1">VIEW ALL</text>
+                            </svg>
                         </button>
                     </div>
 
@@ -607,6 +615,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- Main JS Code -->
-    <script src="index.js?v=4.3"></script>
+    <script src="index.js?v=4.4"></script>
 </body>
 </html>

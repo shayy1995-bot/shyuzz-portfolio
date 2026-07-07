@@ -686,8 +686,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isExpanded) {
                 // Expand extra projects
                 toggleBtn.classList.add('expanded');
-                toggleBtn.querySelector('.btn-text').textContent = 'VIEW LESS';
-                gsap.to(toggleBtn.querySelector('.btn-arrow'), { rotate: -180, duration: 0.3 });
+                const textEl = toggleBtn.querySelector('.ribbon-text');
+                if (textEl) textEl.textContent = 'VIEW LESS';
                 
                 extraProjects.forEach((panel, index) => {
                     panel.style.display = 'block';
@@ -708,8 +708,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Collapse extra projects
                 toggleBtn.classList.remove('expanded');
-                toggleBtn.querySelector('.btn-text').textContent = 'VIEW ALL';
-                gsap.to(toggleBtn.querySelector('.btn-arrow'), { rotate: 0, duration: 0.3 });
+                const textEl = toggleBtn.querySelector('.ribbon-text');
+                if (textEl) textEl.textContent = 'VIEW ALL';
                 
                 // Smooth scroll back to #work section header first
                 document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
