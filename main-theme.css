@@ -1109,20 +1109,212 @@ a {
     line-height: 1.6;
 }
 
-/* Offset grid rows */
-.project-row {
+/* Fixed Background Typography 'Work' */
+.work-background-text {
+    font-size: calc(120px + 24vw);
+    line-height: 100%;
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif; /* Serif font matching screenshots */
+    color: #9c2b35; /* Dark crimson red matching screenshots */
+    font-weight: 800;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    display: block;
+    will-change: opacity;
+}
+
+/* Portsection & Panelc Layout (Idyllic Style) */
+.portsection {
+    position: relative;
+    z-index: 2;
+    margin-top: 10vw;
+}
+
+.portsection .row {
     display: flex;
-    justify-content: space-between;
-    gap: 6rem;
+    flex-wrap: wrap;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.project-row .project-block {
-    width: 47%;
+.portsection .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    box-sizing: border-box;
 }
 
-.project-row .col-right {
-    margin-top: 140px;
+/* Offsets matching Idyllic columns */
+.portsection .offset-md-6 {
+    margin-left: 50%;
+}
+
+.portsection .offset-md-5 {
+    margin-left: 41.666667%; /* 5/12 of 100% */
+}
+
+.portsection .offset-md-3 {
+    margin-left: 25%; /* 3/12 of 100% */
+}
+
+.panelc {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25vh; /* Large vertical gap between staggered items */
+}
+
+.panelc.hide {
+    display: none !important;
+}
+
+.panelc:has(.project-block.hide) {
+    display: none !important;
+}
+
+/* Extra projects state */
+.extra-project {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Gallery Sizing & Staggering */
+.gallery-wrap {
+    transform: scale(1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.gallery {
+    width: 38vw; /* Match Idyllic image width */
+    margin: 0;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Perfect 1:1 squares */
+    border-radius: 0px; /* Sharp brutalist corners */
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Hover Zoom interaction on the project squares */
+.gallery-wrap:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.panelc .project-block {
+    display: flex;
+    flex-direction: column;
+    width: 38vw; /* Maintain card layout matching image width */
+}
+
+/* Custom blue ribbon VIEW ALL button */
+.view-more-btn-container {
+    text-align: center;
+    padding-top: 10vw;
+    position: relative;
+    z-index: 9;
+}
+
+.view-more-custom-btn {
+    background-color: #8dafd6; /* Blue background matching Screenshot 2 */
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.view-more-custom-btn:hover {
+    background-color: #7b9ec5;
+    transform: translateY(-2px);
+}
+
+.view-more-custom-btn .btn-text {
+    color: #121215;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.view-more-custom-btn .btn-arrow {
+    display: flex;
+    align-items: center;
+    color: #121215;
+    transition: transform 0.3s ease;
+}
+
+.view-more-custom-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+.view-more-custom-btn .arrow-svg {
+    width: 24px;
+    height: 12px;
+}
+
+/* Testimonials / Kind Words Section & Swimming Duck */
+.kind-words-section {
+    height: 350px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.kind-words-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/Kind.gif');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.12; /* Subtle branding match */
+    pointer-events: none;
+}
+
+.kind-words-section .duck {
+    position: absolute;
+    left: -200px; /* Start off-screen left */
+    top: 30%;
+    z-index: 2;
+    width: 150px;
+    height: auto;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.kind-words-section .duck img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ==========================================================================
@@ -1611,22 +1803,17 @@ a {
     .cutout-item.item-2 { width: 40%; top: 35%; }
     .cutout-item.item-3 { width: 38%; left: 30%; bottom: 2%; }
 
-    .project-row {
-        flex-direction: column;
-        gap: 4rem;
+    .portsection {
+        margin-top: 6vw;
     }
-    
-    .project-row .project-block {
-        width: 100%;
+    .panelc {
+        margin-bottom: 12vh;
     }
-    
-    .project-row .col-right {
-        margin-top: 0;
+    .gallery {
+        width: 45vw !important;
     }
-    
-    .project-block.full-width .project-details-layout {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .panelc .project-block {
+        width: 45vw !important;
     }
     
     .about-grid, .contact-grid {
@@ -1733,6 +1920,38 @@ a {
     
     .custom-cursor {
         display: none; /* Hide custom cursor on mobile touch devices */
+    }
+
+    .work-background-text {
+        display: none !important;
+    }
+    .portsection {
+        margin-top: 4rem;
+    }
+    .panelc {
+        margin-bottom: 6rem;
+    }
+    .gallery {
+        width: 100% !important;
+    }
+    .panelc .project-block {
+        width: 100% !important;
+    }
+    .portsection .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .portsection .offset-md-6,
+    .portsection .offset-md-5,
+    .portsection .offset-md-3 {
+        margin-left: 0 !important;
+    }
+    .kind-words-section {
+        height: 220px;
+    }
+    .kind-words-section .duck {
+        width: 100px;
+        left: -120px;
     }
 }
 

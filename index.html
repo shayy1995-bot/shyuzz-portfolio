@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
     
     <!-- CSS Style -->
-    <link rel="stylesheet" href="main-theme.css?v=4.0">
+    <link rel="stylesheet" href="main-theme.css?v=4.3">
 </head>
 <body>
 
@@ -292,6 +292,10 @@
             <div class="scroll-color-panel" data-bg-color="#020203">
                 <!-- Projects Showcase Section (Idyllic Inspired Layout) -->
             <section id="work" class="work-section">
+                <!-- Anchor for fading in the fixed "Work" background text -->
+                <div class="workon"></div>
+                <div class="work-background-text">Work</div>
+
                 <div class="work-container">
                     <div class="section-header">
                         <h2 class="section-title"><span class="reveal-text">Selected Case Studies</span></h2>
@@ -304,124 +308,131 @@
                         </div>
                     </div>
 
-                    <!-- Work Editorial Layout (Alternating Large Cards) -->
-                    <div class="work-editorial">
+                    <!-- Asymmetric alternating portfolio track (Idyllic Style) -->
+                    <div class="portsection">
                         
-                        <!-- Project 1 (Full Width Editorial Banner) -->
-                        <div class="project-block full-width" data-category="branding" data-project-id="gil-goren">
-                            <div class="project-media">
-                                <img src="assets/branding/%E2%80%9CCan%20You%20See%20The%20Beauty%E2%80%9D%20%E2%80%94%20Exhibition%20Design%20for%20Artist%20Gil%20Goren/rotator.png" alt="“Can You See The Beauty” Exhibition Design" class="project-img">
-                            </div>
-                            <div class="project-details-layout">
-                                <div class="project-meta-info">
-                                    <span class="project-tag">Exhibition Design • Branding</span>
-                                    <h3 class="project-title">“Can You See The Beauty”</h3>
-                                </div>
-                                <div class="project-desc-wrapper">
-                                    <p class="project-desc">Comprehensive exhibition design and identity for artist Gil Goren at the Hermann Struck Museum. The layout creates a bold, RGB-based contemporary dialogue with the museum's historical architecture.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Side-by-Side Offset Row 1 -->
-                        <div class="project-row">
-                            
-                            <!-- Project 2 (Left Column) -->
-                            <div class="project-block col-left" data-category="branding" data-project-id="red-bus">
-                                <div class="project-media">
-                                    <img src="assets/branding/Haifa%20Tourism%20The%20Red%20Bus%20Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png" alt="Haifa Tourism Red Bus Design" class="project-img">
-                                </div>
-                                <div class="project-details-layout">
-                                    <div class="project-meta-info">
-                                        <span class="project-tag">Branding • Transport Design</span>
-                                        <h3 class="project-title">Haifa Tourism: The Red Bus</h3>
+                        <!-- Panel 1 (Left Column) -->
+                        <div class="panelc panel1 reveal fadee" data-category="branding" data-project-id="gil-goren">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/branding/%E2%80%9CCan%20You%20See%20The%20Beauty%E2%80%9D%20%E2%80%94%20Exhibition%20Design%20for%20Artist%20Gil%20Goren/rotator.png" alt="“Can You See The Beauty” Exhibition Design" class="project-img">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="project-desc">Visual concept and detailed graphic design mapping for Haifa's official tourism double-decker bus, adding character and vibrant local identity to the streetscape.</p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Project 3 (Right Column) -->
-                            <div class="project-block col-right" data-category="branding" data-project-id="branding-myself">
-                                <div class="project-media">
-                                    <img src="assets/branding/branding%20Myself%20The%20Most%20Difficult%20Client/04e3a117-75b8-497b-804b-d801a6688faa.png" alt="Branding Myself" class="project-img">
-                                </div>
-                                <div class="project-details-layout">
-                                    <div class="project-meta-info">
-                                        <span class="project-tag">Branding • Self-Identity</span>
-                                        <h3 class="project-title">Branding Myself: The Difficult Client</h3>
+                        <!-- Panel 2 (Right Column - offset-md-6) -->
+                        <div class="panelc panel2 reveal fadee" data-category="branding" data-project-id="red-bus">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 offset-md-6">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/branding/Haifa%20Tourism%20The%20Red%20Bus%20Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png" alt="Haifa Tourism Red Bus Design" class="project-img">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="project-desc">Developing a cheeky, bold, and sassy visual identity for Shyuzz Studio. Infused with neon hues, custom icons, and interactive digital layout concepts.</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Project 4 (Full Width Editorial Banner 2) -->
-                        <div class="project-block full-width" data-category="murals" data-project-id="garin-tzabar">
-                            <div class="project-media">
-                                <img src="assets/murals/Garin%20Tzabar%20%7C%20Community%20Wall%20Art/540514125_1171119641713980_4907827523360123064_n.jpg" alt="Garin Tzabar Community Wall Art" class="project-img">
-                            </div>
-                            <div class="project-details-layout">
-                                <div class="project-meta-info">
-                                    <span class="project-tag">Environmental Art • Mural Design</span>
-                                    <h3 class="project-title">Garin Tzabar: Community Wall Art</h3>
-                                </div>
-                                <div class="project-desc-wrapper">
-                                    <p class="project-desc">A large-scale public mural design created for Garin Tzabar, blending illustrative community symbols with bold graphic elements to revitalize a shared urban space.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Side-by-Side Offset Row 2 -->
-                        <div class="project-row">
-                            
-                            <!-- Project 5 (Left Column) -->
-                            <div class="project-block col-left" data-category="murals" data-project-id="papa-bakery">
-                                <div class="project-media">
-                                    <img src="assets/murals/Papa%20Bakery/IMG_3312.jpeg" alt="Papa Bakery Mural" class="project-img">
-                                </div>
-                                <div class="project-details-layout">
-                                    <div class="project-meta-info">
-                                        <span class="project-tag">Mural • Commercial Spaces</span>
-                                        <h3 class="project-title">Papa Bakery Murals</h3>
+                        <!-- Panel 3 (Left Column) -->
+                        <div class="panelc panel3 reveal fadee" data-category="branding" data-project-id="branding-myself">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/branding/branding%20Myself%20The%20Most%20Difficult%20Client/04e3a117-75b8-497b-804b-d801a6688faa.png" alt="Branding Myself" class="project-img">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="project-desc">Handcrafted interior mural designs created for Papa Bakery, establishing a warm, artisanal brand story through typographic painting and illustrations.</p>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Project 6 (Right Column) -->
-                            <div class="project-block col-right" data-category="branding" data-project-id="pop-art">
-                                <div class="project-media">
-                                    <img src="assets/branding/Pop%20Art%20Family%20Festival/DL-56246%20POP%20ART%20FAMILIES.png" alt="Pop Art Family Festival" class="project-img">
-                                </div>
-                                <div class="project-details-layout">
-                                    <div class="project-meta-info">
-                                        <span class="project-tag">Identity • Event Branding</span>
-                                        <h3 class="project-title">Pop Art Family Festival</h3>
+                        <!-- Panel 4 (Right Column - offset-md-5) -->
+                        <div class="panelc panel4 reveal fadee" data-category="murals" data-project-id="garin-tzabar">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 offset-md-5">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/murals/Garin%20Tzabar%20%7C%20Community%20Wall%20Art/540514125_1171119641713980_4907827523360123064_n.jpg" alt="Garin Tzabar Community Wall Art" class="project-img">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="project-desc">Visual language, logo, and marketing banner suites developed for the Pop Art Family Festival, featuring high-contrast illustration styling.</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Project 7 (Full Width Editorial Banner 3) -->
-                        <div class="project-block full-width" data-category="branding" data-project-id="museums-campaign">
-                            <div class="project-media">
-                                <img src="assets/branding/Haifa%20Museums%20Promotional%20Poster%20Series/DL-57304%20Passover%20HMS%20Banners%20%D7%A4%D7%9C%D7%96%D7%9E%D7%94%201600x916.png" alt="Haifa Museums Poster Design" class="project-img">
-                            </div>
-                            <div class="project-details-layout">
-                                <div class="project-meta-info">
-                                    <span class="project-tag">Campaign • Editorial Poster</span>
-                                    <h3 class="project-title">Haifa Museums: Campaign Series</h3>
-                                </div>
-                                <div class="project-desc-wrapper">
-                                    <p class="project-desc">A series of high-energy exhibition marketing posters and outdoor banners designed for Haifa Museums, using bold colorblocking and structured typography to maximize public engagement.</p>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Panel 5 (Left Column - extra-project) -->
+                        <div class="panelc panel5 reveal fadee extra-project" data-category="murals" data-project-id="papa-bakery">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/murals/Papa%20Bakery/IMG_3312.jpeg" alt="Papa Bakery Mural" class="project-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 6 (Right Column - offset-md-6 - extra-project) -->
+                        <div class="panelc panel6 reveal fadee extra-project" data-category="branding" data-project-id="pop-art">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 offset-md-6">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/branding/Pop%20Art%20Family%20Festival/DL-56246%20POP%20ART%20FAMILIES.png" alt="Pop Art Family Festival" class="project-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 7 (Centered / offset-md-3 - extra-project) -->
+                        <div class="panelc panel7 reveal fadee extra-project" data-category="branding" data-project-id="museums-campaign">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 offset-md-3">
+                                    <div class="project-block">
+                                        <div class="gallery-wrap">
+                                            <div class="gallery">
+                                                <img src="assets/branding/Haifa%20Museums%20Promotional%20Poster%20Series/DL-57304%20Passover%20HMS%20Banners%20%D7%A4%D7%9C%D7%96%D7%9E%D7%94%201600x916.png" alt="Haifa Museums Poster Design" class="project-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- End of .portsection -->
+                    
+                    <!-- Anchor for fading out the fixed background "Work" text -->
+                    <div class="workoff"></div>
+
+                    <!-- Custom Decorative Ribbon VIEW ALL button (Idyllic Style) -->
+                    <div class="view-more-btn-container">
+                        <button class="view-more-custom-btn" id="toggle-projects-btn">
+                            <span class="btn-text">VIEW ALL</span>
+                            <span class="btn-arrow">
+                                <svg viewBox="0 0 32 16" class="arrow-svg">
+                                    <path d="M 0,8 H 28 M 24,3 L 29,8 L 24,13" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
                     </div>
+
                 </div>
             </section>
             </div> <!-- Close Panel 3 -->
@@ -474,6 +485,14 @@
 
             <!-- Panel 5: Pure Black Background for Contact and Footer -->
             <div class="scroll-color-panel" data-bg-color="#020203">
+                <!-- Kind Words Swimming Duck Section -->
+                <section id="kind-words" class="kind-words-section">
+                    <div class="kind-words-bg"></div>
+                    <div class="duck">
+                        <img src="assets/duck-black.png" alt="Duck">
+                    </div>
+                </section>
+
                 <!-- Contact Section -->
             <section id="contact" class="contact-section">
                 
@@ -588,6 +607,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- Main JS Code -->
-    <script src="index.js?v=4.0"></script>
+    <script src="index.js?v=4.3"></script>
 </body>
 </html>

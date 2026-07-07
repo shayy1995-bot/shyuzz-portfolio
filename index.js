@@ -222,24 +222,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const filterValue = btn.getAttribute('data-filter');
 
-            gsap.to('.work-editorial', {
+            const showExtra = (filterValue !== 'all') || (document.getElementById('toggle-projects-btn')?.classList.contains('expanded'));
+
+            gsap.to('.portsection', {
                 opacity: 0,
                 y: 15,
                 duration: 0.3,
                 onComplete: () => {
                     projectBlocks.forEach(card => {
                         const category = card.getAttribute('data-category');
-                        if (filterValue === 'all' || category === filterValue) {
+                        const panel = card.closest('.panelc');
+                        const isExtra = panel && panel.classList.contains('extra-project');
+                        
+                        const matchesFilter = (filterValue === 'all' || category === filterValue);
+                        const shouldShow = matchesFilter && (!isExtra || showExtra);
+                        
+                        if (shouldShow) {
                             card.classList.remove('hide');
+                            if (panel) {
+                                panel.classList.remove('hide');
+                                if (isExtra) {
+                                    panel.style.display = 'block';
+                                    panel.style.opacity = '1';
+                                }
+                            }
                         } else {
                             card.classList.add('hide');
+                            if (panel) {
+                                panel.classList.add('hide');
+                                if (isExtra && filterValue === 'all') {
+                                    panel.style.display = 'none';
+                                    panel.style.opacity = '0';
+                                }
+                            }
                         }
                     });
                     
                     // Re-calculate ScrollTrigger positions
                     ScrollTrigger.refresh();
                     
-                    gsap.to('.work-editorial', {
+                    gsap.to('.portsection', {
                         opacity: 1,
                         y: 0,
                         duration: 0.5,
@@ -635,4 +657,104 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Fixed Background "Work" Text Fade-in/out ScrollTrigger
+    if (document.querySelector('.work-background-text')) {
+        gsap.fromTo('.work-background-text',
+            { opacity: 0 },
+            {
+                opacity: 0.15, // Prominent serif background opacity matching screenshots
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#work',
+                    start: 'top 30%',
+                    end: 'bottom 70%',
+                    toggleActions: 'play reverse play reverse'
+                }
+            }
+        );
+    }
+
+    // Toggle Projects Button click handler (VIEW ALL / VIEW LESS)
+    const toggleBtn = document.getElementById('toggle-projects-btn');
+    if (toggleBtn) {
+        const extraProjects = document.querySelectorAll('.extra-project');
+        
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.classList.contains('expanded');
+            
+            if (!isExpanded) {
+                // Expand extra projects
+                toggleBtn.classList.add('expanded');
+                toggleBtn.querySelector('.btn-text').textContent = 'VIEW LESS';
+                gsap.to(toggleBtn.querySelector('.btn-arrow'), { rotate: -180, duration: 0.3 });
+                
+                extraProjects.forEach((panel, index) => {
+                    panel.style.display = 'block';
+                    gsap.fromTo(panel, 
+                        { opacity: 0, y: 30 },
+                        { 
+                            opacity: 1, 
+                            y: 0, 
+                            duration: 0.6, 
+                            delay: index * 0.15,
+                            ease: 'power3.out',
+                            onComplete: () => {
+                                ScrollTrigger.refresh();
+                            }
+                        }
+                    );
+                });
+            } else {
+                // Collapse extra projects
+                toggleBtn.classList.remove('expanded');
+                toggleBtn.querySelector('.btn-text').textContent = 'VIEW ALL';
+                gsap.to(toggleBtn.querySelector('.btn-arrow'), { rotate: 0, duration: 0.3 });
+                
+                // Smooth scroll back to #work section header first
+                document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+                
+                // Animate collapse
+                gsap.to(extraProjects, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.4,
+                    stagger: 0.05,
+                    onComplete: () => {
+                        extraProjects.forEach(panel => {
+                            panel.style.display = 'none';
+                        });
+                        ScrollTrigger.refresh();
+                    }
+                });
+            }
+        });
+    }
+
+    // Swimming Duck bobbing and tilting ScrollTrigger
+    if (document.querySelector('.kind-words-section .duck')) {
+        const duck = document.querySelector('.kind-words-section .duck');
+        const waveAmplitude = 12; // Bobbing height in px
+        const waveFrequency = 3;  // Number of full waves
+        
+        gsap.to(duck, {
+            x: () => window.innerWidth + 300, // Swim fully off-screen right
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.kind-words-section',
+                start: 'top 85%',
+                end: 'bottom 15%',
+                scrub: 1, // Smooth scrolling scrub
+                invalidateOnRefresh: true,
+                onUpdate: self => {
+                    let progress = self.progress;
+                    // Calculate sine wave vertical position
+                    let y = Math.sin(progress * Math.PI * 2 * waveFrequency) * waveAmplitude;
+                    // Calculate cosine wave tilt angle (derivative of sine)
+                    let tilt = Math.cos(progress * Math.PI * 2 * waveFrequency) * 6; // degrees
+                    gsap.set(duck, { yPercent: y, rotate: tilt });
+                }
+            }
+        });
+    }
 });
