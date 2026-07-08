@@ -1120,7 +1120,7 @@ a {
     left: 0;
     bottom: 10vw; /* Idyllic: bottom: 10vw */
     font-family: 'Playfair Display', serif;
-    color: #c03441; /* Exact crimson red from idyllic.co.nz */
+    color: var(--color-magenta); /* Brand neon hot pink */
     font-weight: 800;
     opacity: 1;
     pointer-events: none;

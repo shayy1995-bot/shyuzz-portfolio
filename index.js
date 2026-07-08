@@ -658,8 +658,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     // =========================================================================
-    // Fixed Background "Work" Text — Show/Hide scroll handler
+    // Fixed Background "Work" Text — Show/Hide via ScrollTrigger
     // Matches Idyllic behavior: fadeIn when scroll is between .workon and .workoff
+    // Uses highly optimized ScrollTrigger to prevent scroll lag/thrashing
     // =========================================================================
     const workBgText = document.querySelector('.work-background-text');
     const workon = document.querySelector('.workon');
@@ -668,24 +669,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (workBgText && workon && workoff) {
         gsap.set(workBgText, { display: 'none', opacity: 0 });
         
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const windowHeight = window.innerHeight;
-            
-            const workonTop = workon.getBoundingClientRect().top + scrollTop;
-            const workoffTop = workoff.getBoundingClientRect().top + scrollTop;
-            
-            if (scrollTop > (workonTop - windowHeight / 2) && scrollTop < (workoffTop - windowHeight / 2)) {
-                gsap.to(workBgText, { display: 'block', opacity: 0.4, duration: 0.5, overwrite: 'auto' });
-            } else {
+        ScrollTrigger.create({
+            trigger: workon,
+            start: 'top 50%', // When .workon reaches the middle of the screen
+            onEnter: () => {
+                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.6, ease: 'power2.out', overwrite: 'auto' });
+            },
+            onLeaveBack: () => {
                 gsap.to(workBgText, { 
                     opacity: 0, 
-                    duration: 0.4, 
+                    duration: 0.5, 
+                    ease: 'power2.in', 
                     overwrite: 'auto', 
-                    onComplete: () => {
-                        workBgText.style.display = 'none';
-                    }
+                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
                 });
+            }
+        });
+        
+        ScrollTrigger.create({
+            trigger: workoff,
+            start: 'top 50%', // When .workoff reaches the middle of the screen
+            onEnter: () => {
+                gsap.to(workBgText, { 
+                    opacity: 0, 
+                    duration: 0.5, 
+                    ease: 'power2.in', 
+                    overwrite: 'auto', 
+                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
+                });
+            },
+            onEnterBack: () => {
+                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.6, ease: 'power2.out', overwrite: 'auto' });
             }
         });
     }
