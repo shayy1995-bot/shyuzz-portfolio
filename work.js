@@ -232,8 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'The Mad Tea Feast',
             desc: 'A wild depiction of my eccentric tea party with none other than myself, my feline muse & Andy Warhol. Providing artistic inspiration that even the teacups envy. Amidst the chaos, hidden details weave a tapestry of my life - a chaotic invention of whimsy, where my cat rules, inspiration flows, and my tea party guest list is exclusively me. It\'s a celebration of the absurd, the amusing, and the gloriously self-indulgent.',
             media: [
-                { type: 'image', path: 'assets/artistic/mad-tea/asset_1.jpg' },
-                { type: 'image', path: 'assets/artistic/mad-tea/asset_2.gif' }
+                { type: 'image', path: 'assets/artistic/mad-tea/asset_1.jpg' }
             ]
         },
         'as-fast-as-you-can': {
@@ -242,8 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'The viewer, fixed in one moment, senses restlessness as events unfold elsewhere. Driven by a constant pursuit of diverse experiences, there\'s a desire to be part of something beyond the present, coupled with the fear of missing out on potentially better moments everywhere.',
             media: [
                 { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_1.jpg' },
-                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_2.jpg' },
-                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_3.gif' }
+                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_2.jpg' }
             ]
         },
         'brenda': {
@@ -277,47 +275,19 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Beyond Boundaries: Wizo Showcase',
             desc: 'As a \"Wizo\" student I participated in the team of the Design college graduation exhibition, we were tasked with developing the branding for this prestigious event.',
             media: [
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_1.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_2.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_1.gif' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_2.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_3.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_4.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_5.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_6.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_4.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_5.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_6.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.png' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_8.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_11.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_11.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_12.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_13.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_14.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_15.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_16.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_17.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_18.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_19.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_20.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_21.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_22.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_23.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_24.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_25.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_26.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_27.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_28.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_29.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_30.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_31.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_32.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_33.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_34.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_35.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_36.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_37.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_38.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_39.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_40.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_41.png' }
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_13.png' }
             ]
         }
     };
