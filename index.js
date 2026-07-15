@@ -729,61 +729,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Toggle Projects Button click handler (VIEW ALL / VIEW LESS)
-    const toggleBtn = document.getElementById('toggle-projects-btn');
-    if (toggleBtn) {
-        const extraProjects = document.querySelectorAll('.extra-project');
-        
-        toggleBtn.addEventListener('click', () => {
-            const isExpanded = toggleBtn.classList.contains('expanded');
-            
-            if (!isExpanded) {
-                // Expand extra projects
-                toggleBtn.classList.add('expanded');
-                const textEl = toggleBtn.querySelector('.ribbon-text');
-                if (textEl) textEl.textContent = 'VIEW LESS';
-                
-                extraProjects.forEach((panel, index) => {
-                    panel.style.display = 'block';
-                    gsap.fromTo(panel, 
-                        { opacity: 0, y: 30 },
-                        { 
-                            opacity: 1, 
-                            y: 0, 
-                            duration: 0.6, 
-                            delay: index * 0.15,
-                            ease: 'power3.out',
-                            onComplete: () => {
-                                ScrollTrigger.refresh();
-                            }
-                        }
-                    );
-                });
-            } else {
-                // Collapse extra projects
-                toggleBtn.classList.remove('expanded');
-                const textEl = toggleBtn.querySelector('.ribbon-text');
-                if (textEl) textEl.textContent = 'VIEW ALL';
-                
-                // Smooth scroll back to #work section header first
-                document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
-                
-                // Animate collapse
-                gsap.to(extraProjects, {
-                    opacity: 0,
-                    y: 30,
-                    duration: 0.4,
-                    stagger: 0.05,
-                    onComplete: () => {
-                        extraProjects.forEach(panel => {
-                            panel.style.display = 'none';
-                        });
-                        ScrollTrigger.refresh();
-                    }
-                });
-            }
-        });
-    }
+    // Toggle Projects Button click handler removed — button now acts as a direct anchor link to work.html
 
     // Swimming Duck bobbing and tilting ScrollTrigger
     if (document.querySelector('.kind-words-section .duck')) {
