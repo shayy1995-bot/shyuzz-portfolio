@@ -423,14 +423,14 @@ a {
     position: absolute;
     left: calc(50vw + (1.85 * clamp(3rem, 10vw, 10rem)));
     top: calc(50% + (0.42 * clamp(3rem, 10vw, 10rem)));
-    width: calc(1.2 * clamp(3rem, 10vw, 10rem));
-    height: calc(1.2 * clamp(3rem, 10vw, 10rem));
+    width: calc(2.4 * clamp(3rem, 10vw, 10rem));
+    height: calc(2.4 * clamp(3rem, 10vw, 10rem));
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: auto;
-    background-color: #ffffff; /* Solid white background sticker as requested */
+    background-color: #ffe600; /* Vibrant yellow background sticker */
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 0.5vw; /* Safe rotation padding */
@@ -447,9 +447,21 @@ a {
     font-family: var(--font-display);
     font-size: 7.2px; /* Adjusted font size to fit long tagline */
     font-weight: 700;
-    fill: #1c060d; /* Matching text color */
+    fill: #ffffff; /* White text */
+    stroke: #1c060d; /* Dark stroke for readability */
+    stroke-width: 0.25px;
     letter-spacing: 0.8px;
     text-transform: uppercase;
+}
+
+.badge-center-gif {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 50%;
 }
 
 .badge-play-icon {
@@ -1876,8 +1888,8 @@ a {
         top: auto !important;
         transform: none !important;
         margin: 3rem auto 0 auto !important;
-        width: 140px !important;
-        height: 140px !important;
+        width: 280px !important;
+        height: 280px !important;
         display: flex !important;
     }
 
@@ -2035,16 +2047,15 @@ a {
 }
 
 .hero-rotating-badge {
-    background-color: #ffffff !important; /* Pure white badge background like the white tilted sticker */
+    background-color: #ffe600 !important; /* Vibrant yellow background */
     border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(255, 102, 217, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(255, 230, 0, 0.3) !important;
 }
 .badge-text {
-    fill: #020203 !important; /* Black text on white sticker */
+    fill: #ffffff !important; /* White text on yellow background */
+    stroke: #020203 !important; /* Dark outline for readability */
+    stroke-width: 0.25px !important;
     font-weight: 800;
-}
-.badge-play-icon {
-    fill: #020203 !important; /* Black play icon */
 }
 
 /* 2.1 Top Marquee */
