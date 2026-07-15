@@ -255,19 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
         'surrounded-by-idiots': {
             tag: 'Motion Graphics • Installation Design',
             title: 'Surrounded by Idiots',
-            desc: 'Dating Culture (Fails) Between Women and Men. We all have bizarre dating stories: awkward situations with men we went out with, stories no one wants to remember, or ones we only laugh about. My project brings to the forefront those bizarre, diverse, and in a word, \"ruthless\" experiences that made us cut ties with that guy. The project involved the creation of 25 videos, each displayed on a separate screen. This approach creates a unique and multi-dimensional experience for the viewer, allowing them to engage with the content in an immersive and stimulating way.',
+            desc: 'Dating Culture (Fails) Between Women and Men. We all have bizarre dating stories: awkward situations with men we went out with, stories no one wants to remember, or ones we only laugh about. My project brings to the forefront those bizarre, diverse, and in a word, \"ruthless\" experiences that made us cut ties with that guy. The work was created using a hand-drawn stop-motion animation technique combined with Adobe After Effects. The project involved the creation of 25 videos, each displayed on a separate screen, creating a unique and multi-dimensional experience for the viewer.',
             media: [
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_1.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_2.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_3.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_4.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_5.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_6.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_11.png' },
                 { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_7.jpg' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_8.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_9.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_10.gif' },
-                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_11.png' }
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_1.gif' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/AchaktiAtHachmi.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/HaHathala.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/HahiAbahoha.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/HakdachTahon.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/HogaHoga.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/HohavHoLo.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/KArishDam_1.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/MeashekAsaftot.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/Mekarer_1.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/Nisoim.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/SanuBon.mp4' },
+                { type: 'video', path: 'assets/posters/surrounded-by-idiots/arsYarok.mp4' }
             ]
         },
         'beyond-boundaries': {
