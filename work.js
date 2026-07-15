@@ -88,6 +88,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', path: 'assets/branding/Haifa Museums Promotional Poster Series/DL-56421 41th Film Festival Ad.jpg' },
                 { type: 'image', path: 'assets/branding/Haifa Museums Promotional Poster Series/DL-56422 Tisrei Holiday AD.jpg' }
             ]
+        },
+        'strange-addiction': {
+            tag: 'Book & Editorial Design',
+            title: '“Strange Addiction” Book Design',
+            desc: 'Cheeky, bold editorial layout and cover design for "Strange Addiction". This publication features custom typographic experiments, visual grid structure disruptions, and full-bleed custom graphics that challenge conventional editorial constraints.',
+            media: [
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_01.png' },
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_03.png' },
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_04.png' },
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_06.png' },
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_07.png' },
+                { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_08.png' }
+            ]
+        },
+        'yiftach-unit': {
+            tag: 'Book & Editorial Design',
+            title: '“Yiftach Unit” — Micha Brickman',
+            desc: 'Premium hard-cover editorial book design and layout planning for "Yiftach Unit" by author Micha Brickman. The concept respects structural historical archives while overlaying clean modern grid layouts and striking, high-contrast black-and-white spreads.',
+            media: [
+                { type: 'image', path: 'assets/books/יחידת יפתח | מיכה בריקמן /Hard Cover Open Book Mockup1.png' }
+            ]
+        },
+        'little-big': {
+            tag: 'Book & Editorial Design',
+            title: '“Little Big” Book Project',
+            desc: 'Vibrant editorial layout design and custom graphic illustrations for the "Little Big" book project. Utilizes saturated vector graphic styles, hand-painted digital layouts, and quirky font pairings to build a lively visual narrative.',
+            media: [
+                { type: 'image', path: 'assets/books/little big/05.png' },
+                { type: 'image', path: 'assets/books/little big/06.png' },
+                { type: 'image', path: 'assets/books/little big/6.1.png' }
+            ]
+        },
+        'pillowcase': {
+            tag: 'Book & Editorial Design',
+            title: '“Pillowcase” Book Design',
+            desc: 'Artistic editorial publication and material design for "Pillowcase". Features organic text wrap layouts, soft photographic spacing, and physical textured paper mockups that evoke comfort and tactility.',
+            media: [
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9720.jpeg' },
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9721.jpeg' },
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9721 2.jpeg' },
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9722.jpeg' },
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9723.jpeg' },
+                { type: 'image', path: 'assets/books/pilowcase/IMG_9725.jpeg' }
+            ]
         }
     };
 
