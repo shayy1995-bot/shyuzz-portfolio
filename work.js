@@ -287,8 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_6.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_8.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.jpg' }
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.jpg' }
             ]
         }
     };
