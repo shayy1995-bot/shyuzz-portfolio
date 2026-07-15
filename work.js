@@ -212,6 +212,113 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 1-8.png' },
                 { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 2-8.png' }
             ]
+        },
+        'neural-pathways': {
+            tag: 'Environmental Art • Wallpaper Design',
+            title: 'Neural Pathways',
+            desc: 'The wallpaper design project aimed to enrich the corridors of the Brain Research Department at a university in Jerusalem. Developed in collaboration with a designer, the project remained conceptual and was not implemented. Inspired by molecular structures and metro station aesthetics, the design sought to symbolize connection, progress, and the complexities of brain research. Though unrealized, it reflected a vision for a space that inspires curiosity and innovation.',
+            media: [
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_1.png' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_2.png' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_3.png' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_4.png' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_5.png' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_6.jpg' },
+                { type: 'image', path: 'assets/murals/neural-pathways/asset_7.png' }
+            ]
+        },
+        'mad-tea': {
+            tag: 'Illustration • Graphic Art',
+            title: 'The Mad Tea Feast',
+            desc: 'A wild depiction of my eccentric tea party with none other than myself, my feline muse & Andy Warhol. Providing artistic inspiration that even the teacups envy. Amidst the chaos, hidden details weave a tapestry of my life - a chaotic invention of whimsy, where my cat rules, inspiration flows, and my tea party guest list is exclusively me. It\'s a celebration of the absurd, the amusing, and the gloriously self-indulgent.',
+            media: [
+                { type: 'image', path: 'assets/artistic/mad-tea/asset_1.jpg' },
+                { type: 'image', path: 'assets/artistic/mad-tea/asset_2.gif' }
+            ]
+        },
+        'as-fast-as-you-can': {
+            tag: 'Concept Art • Motion Design',
+            title: 'As Fast as You Can',
+            desc: 'The viewer, fixed in one moment, senses restlessness as events unfold elsewhere. Driven by a constant pursuit of diverse experiences, there\'s a desire to be part of something beyond the present, coupled with the fear of missing out on potentially better moments everywhere.',
+            media: [
+                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_1.jpg' },
+                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_2.jpg' },
+                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_3.gif' }
+            ]
+        },
+        'brenda': {
+            tag: 'Typographic Poster • Graphic Design',
+            title: 'Brenda — Fontimonim Talents Poster',
+            desc: 'Poster design created for the “Fontimonim” Talents platform, inspired by the font “Brenda”. The poster presents the characteristics of the font into a visual persona — bold, sharp, and self-assured. I approached Brenda as a strong female figure, confident in presence and unafraid to occupy the margins. composition, hierarchy, and tone, allowing the typography to lead the visual narrative to a result of a typographic poster that treats the font not just as a tool, but as a character in its own right.',
+            media: [
+                { type: 'image', path: 'assets/artistic/brenda/asset_1.png' }
+            ]
+        },
+        'surrounded-by-idiots': {
+            tag: 'Motion Graphics • Installation Design',
+            title: 'Surrounded by Idiots',
+            desc: 'Dating Culture (Fails) Between Women and Men. We all have bizarre dating stories: awkward situations with men we went out with, stories no one wants to remember, or ones we only laugh about. My project brings to the forefront those bizarre, diverse, and in a word, \"ruthless\" experiences that made us cut ties with that guy. The project involved the creation of 25 videos, each displayed on a separate screen. This approach creates a unique and multi-dimensional experience for the viewer, allowing them to engage with the content in an immersive and stimulating way.',
+            media: [
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_1.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_2.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_3.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_4.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_5.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_6.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_7.jpg' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_8.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_9.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_10.gif' },
+                { type: 'image', path: 'assets/posters/surrounded-by-idiots/asset_11.png' }
+            ]
+        },
+        'beyond-boundaries': {
+            tag: 'Exhibition Branding • Identity',
+            title: 'Beyond Boundaries: Wizo Showcase',
+            desc: 'As a \"Wizo\" student I participated in the team of the Design college graduation exhibition, we were tasked with developing the branding for this prestigious event.',
+            media: [
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_1.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_2.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_3.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_4.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_5.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_6.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_8.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_11.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_12.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_13.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_14.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_15.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_16.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_17.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_18.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_19.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_20.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_21.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_22.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_23.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_24.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_25.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_26.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_27.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_28.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_29.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_30.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_31.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_32.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_33.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_34.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_35.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_36.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_37.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_38.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_39.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_40.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_41.png' }
+            ]
         }
     };
 
