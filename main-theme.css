@@ -1944,6 +1944,57 @@ a {
         width: 100px;
         left: -120px;
     }
+
+    /* Case Study Modal responsive enhancements */
+    .modal-scroll-container {
+        padding: 6rem 1.5rem 4rem 1.5rem !important;
+        -webkit-overflow-scrolling: touch;
+    }
+    .modal-close-btn {
+        background-color: rgba(2, 2, 3, 0.75) !important;
+        border: 1px solid rgba(255, 102, 217, 0.3) !important;
+        border-radius: 50% !important;
+        width: 46px !important;
+        height: 46px !important;
+        top: 1rem !important;
+        right: 1rem !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+    }
+    .modal-close-btn svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .modal-header {
+        margin-bottom: 3.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+    .modal-gallery {
+        gap: 2.5rem !important;
+    }
+
+    /* Always show name/tags on mobile touchscreens (hover replacement) */
+    .grid-item span.name {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        background: linear-gradient(180deg, rgba(2, 2, 3, 0) 30%, rgba(2, 2, 3, 0.85) 90%) !important;
+        padding: 20px 15px !important;
+        font-size: 1.3rem !important;
+    }
+    .grid-item span.name .tags {
+        font-size: 0.8rem !important;
+        margin-top: 5px !important;
+    }
+
+    /* Portfolio Grid page header mobile size adjustment */
+    .portfolio-heading {
+        font-size: clamp(2.8rem, 10vw, 4.5rem) !important;
+        transform: none !important;
+        line-height: 1.1 !important;
+    }
+    .portfolio-grid-header {
+        padding-top: 60px !important;
+    }
 }
 
 /* ==========================================================================
