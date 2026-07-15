@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'gil-goren': {
             tag: 'Exhibition Design • Branding',
             title: '“Can You See The Beauty” — Gil Goren',
-            desc: 'Exhibition design for artist Gil Goren at the “Hermann Struck” Museum. The exhibition title, “Can You See The Beauty”, is taken from a poem by Nathan Alterman, reflecting the poetic dialogue between past and present that runs through the show. Goren’s work references the legacy of Hermann Struck in Eretz Israel while introducing a contemporary visual language defined by bold, saturated colors. Following in-depth research into the artist’s practice, the exhibition space was divided into RGB zones with an additional green axis, echoing the chromatic structure of the artworks.',
+            desc: 'Exhibition design for artist Gil Goren at the “Hermann Struck” Museum. The exhibition title, “Can You See The Beauty”, is taken from a poem by Nathan Alterman, reflecting the poetic dialogue between past and present that runs through the show. Goren’s work references the legacy of Hermann Struck in Eretz Israel while introducing a contemporary visual language defined by bold, saturated colors. Following in-depth research into the artist’s practice, the exhibition space was divided into RGB zones with an additional green axis, echoing the chromatic structure of the artworks. This color-based spatial system guided visitors through the exhibition, creating a layered conversation between historical influence, modern interpretation, and the museum’s architectural framework.',
             media: [
                 { type: 'image', path: 'assets/branding/“Can You See The Beauty” — Exhibition Design for Artist Gil Goren/rotator.png' },
                 { type: 'image', path: 'assets/branding/“Can You See The Beauty” — Exhibition Design for Artist Gil Goren/Colbo and Yediot.jpg' },
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
             desc: 'Visual concept and detailed graphic design mapping for Haifa\'s official tourism double-decker bus, adding character and vibrant local identity to the streetscape. The wrapping layout integrates illustrative and graphic elements, showing the historical tourist attractions of the city of Haifa.',
             media: [
                 { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png' },
-                { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/ChatGPT Image May 19, 2026, 06_50_00 PM (1).png' },
-                { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/ChatGPT Image May 19, 2026, 06_50_00 PM (2).png' }
+                { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/qr sticker_Page_1_Image_0001.png' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/qr sticker_Page_2_Image_0001.png' }
             ]
         },
         'branding-myself': {
             tag: 'Branding • Self-Identity',
             title: 'Branding Myself: The Difficult Client',
-            desc: 'Developing a cheeky, bold, and sassy visual identity for Shyuzz Studio. Infused with neon hues, custom icons, and interactive digital layout concepts, this branding showcases the studio\'s refusal of the ordinary, turning corporate assets into visual statements.',
+            desc: 'As a graphic designer, branding myself was one of the most challenging projects I’ve ever tackled. I had to dig deep, figure out how I want to present my studio, and translate that into a clear and unique visual language. The process included creating a logo, selecting a color palette, typography, and graphic elements that reflect Shyuzz Studio: bold creativity, vibrant colors, and a personal touch. The result? A brand that feels 100% me – authentic, creative, and professional. If I can brand myself, I can brand anything!',
             media: [
                 { type: 'image', path: 'assets/branding/branding Myself The Most Difficult Client/04e3a117-75b8-497b-804b-d801a6688faa.png' },
                 { type: 'image', path: 'assets/branding/branding Myself The Most Difficult Client/17098fc3-75af-48f3-ae47-b4b0984c7085.png' },
@@ -45,34 +45,58 @@ document.addEventListener('DOMContentLoaded', () => {
         'garin-tzabar': {
             tag: 'Environmental Art • Mural Design',
             title: 'Garin Tzabar: Community Wall Art',
-            desc: 'A large-scale public mural design created for Garin Tzabar, blending illustrative community symbols with bold graphic elements to revitalize a shared urban space. The project features hand-painted walls and interactive digital templates designed in collaboration with the community members.',
+            desc: 'A large-scale mural created for Garin Tzabar, a community of lone soldiers and new immigrants that left their homeland to serve in the IDF. The artwork visually narrates the journey of aliyah, homeland, and shared vision, blending symbols of identity and patriotism, belonging, and resilience. Created in collaboration with “Dotan-Lidgi” Studio, the mural transforms a communal space into a meaningful reflection of collective spirit and purpose.',
             media: [
                 { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/540514125_1171119641713980_4907827523360123064_n.jpg' },
                 { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/538530753_1171119625047315_2672241607695226882_n.jpg' },
-                { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/sdסופי.png' },
+                { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/sd_.png' },
                 { type: 'video', path: 'assets/murals/Garin Tzabar | Community Wall Art/Untitled.mp4' }
             ]
         },
         'papa-bakery': {
             tag: 'Mural • Commercial Spaces',
             title: 'Papa Bakery Murals',
-            desc: 'Handcrafted interior mural designs created for Papa Bakery, establishing a warm, artisanal brand story through typographic painting and illustrations. Designed to draw visual interest and set an inviting, premium tone for visiting customers.',
+            desc: 'My mural project features a nearly 2-meter artwork showcasing the bakery\'s logo, blending natural elements with imagery of the baked goods crafted on-site. The design highlights the bakery\'s deep connection to nature, reflected in its philosophy and use of fresh, natural ingredients. This mural creates a harmonious visual centerpiece that conveys warmth, authenticity, and a celebration of both nature and craftsmanship.',
             media: [
                 { type: 'image', path: 'assets/murals/Papa Bakery/IMG_3312.jpeg' },
                 { type: 'image', path: 'assets/murals/Papa Bakery/IMG_3322 Large.jpeg' },
                 { type: 'image', path: 'assets/murals/Papa Bakery/image-fc8d0ba0-5e5b-4c6a-97ac-a17c7a12f967.webp' }
             ]
         },
+        'bloomy': {
+            tag: 'Environmental Art • Mural Design',
+            title: 'Bloomy — Street Art Haifa',
+            desc: 'The TALKING WALLS project is a street museum that narrates the Israeli story through murals created by Israeli artists. The murals story begins with a "time travel" through the utopia before October 7, progresses through the events of the massacre and the war, and concludes by commemorating the events, honoring the heroes, and inspiring hope. Our project speaks of hope. This ethereal figure holds a dandelion in its hand, which self-propagates in the wind, giving rise to new dandelions. Located at HaNamal 38, Haifa.',
+            media: [
+                { type: 'image', path: 'assets/murals/Bloomy/unnamed.png' },
+                { type: 'image', path: 'assets/murals/Bloomy/3D435DC3-00DF-406C-A10C-B22ACCE695BE.jpg' },
+                { type: 'image', path: 'assets/murals/Bloomy/46F29B14-61CF-431C-9E11-70FCA6A8BBAA.jpg' },
+                { type: 'image', path: 'assets/murals/Bloomy/49B96FD4-78A8-4002-850F-2CA87B8B6780.jpg' },
+                { type: 'image', path: 'assets/murals/Bloomy/IMG_0311.jpeg' },
+                { type: 'image', path: 'assets/murals/Bloomy/IMG_0345.jpeg' }
+            ]
+        },
+        'job-leap': {
+            tag: 'Identity • Event Branding',
+            title: 'Job Leap Conference Branding',
+            desc: 'Event branding and visual design created for the Ministry of Aliyah and Integration. The conference focused on job searching and professional integration for new immigrants, connecting them with diverse industries. Designed as part of my work at “Dotan-Lidgi” Studio.',
+            media: [
+                { type: 'image', path: 'assets/branding/job-leap-branding/map-folded-flyer-mockup.jpg' },
+                { type: 'image', path: 'assets/branding/job-leap-branding/flyer-multi-language.png' },
+                { type: 'image', path: 'assets/branding/job-leap-branding/artboard-1.png' },
+                { type: 'image', path: 'assets/branding/job-leap-branding/flyer-mockup.jpg' }
+            ]
+        },
         'pop-art': {
             tag: 'Identity • Event Branding',
             title: 'Pop Art Family Festival',
-            desc: 'Visual language, logo, and marketing banner suites developed for the Pop Art Family Festival. The design incorporates high-contrast illustration style, bringing comic-style branding elements to print billboards, online banners, and spatial layouts.',
+            desc: 'Branding and visual design for a Pop Art festival for the whole family, presented by the Municipality of Haifa at “Sammy Ofer” stadium. The event featured a wide range of interactive activities, creative workshops, and vibrant installations, all infused with the playful energy of pop art. I developed the visual identity to reflect the joyful spirit of the festival, combining bold color, dynamic typography, and engaging graphic elements that appeal to all ages. Created as part of my work at “Dotan-Lidgi” Studio.',
             media: [
                 { type: 'image', path: 'assets/branding/Pop Art Family Festival/DL-56246 POP ART FAMILIES.png' },
                 { type: 'image', path: 'assets/branding/Pop Art Family Festival/DL-56246 POP ART FAMILIES banners - Social-Cover 851-315.jpg' },
                 { type: 'image', path: 'assets/branding/Pop Art Family Festival/DL-56246 POP ART FAMILIES banners - Social-Insta 1080x1920.jpg' },
                 { type: 'image', path: 'assets/branding/Pop Art Family Festival/standing-billboard-template-front-shop.png' },
-                { type: 'image', path: 'assets/branding/Pop Art Family Festival/סמי עופר.jpg' }
+                { type: 'image', path: 'assets/branding/Pop Art Family Festival/ _.jpg' }
             ]
         },
         'museums-campaign': {
@@ -92,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'strange-addiction': {
             tag: 'Book & Editorial Design',
             title: '“Strange Addiction” Book Design',
-            desc: 'Cheeky, bold editorial layout and cover design for "Strange Addiction". This publication features custom typographic experiments, visual grid structure disruptions, and full-bleed custom graphics that challenge conventional editorial constraints.',
+            desc: 'This project hilariously unravels the tapestry of everyday addictions we all secretly nurture. As naughty as they may be, we\'ve got these tiny obsessions we wish we could bid farewell. Yet, here we are, cheers to persistently indulging in these quirks that make life amusingly unpredictable!',
             media: [
                 { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_01.png' },
                 { type: 'image', path: 'assets/books/starnge eddiction/Book_Mockup_03.png' },
@@ -105,15 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'yiftach-unit': {
             tag: 'Book & Editorial Design',
             title: '“Yiftach Unit” — Micha Brickman',
-            desc: 'Premium hard-cover editorial book design and layout planning for "Yiftach Unit" by author Micha Brickman. The concept respects structural historical archives while overlaying clean modern grid layouts and striking, high-contrast black-and-white spreads.',
+            desc: 'Book design for a documentary publication telling the story of the “Yiftach” IDF Unit, which took part in the fighting on October 7. Accompanied by photographer Micha Birkman, who documented the combat and its aftermath, the book combines powerful photography with restrained design to honor the reality and weight of the events. Created as part of my work at “Dotan-Lidgi” Studio.',
             media: [
-                { type: 'image', path: 'assets/books/יחידת יפתח | מיכה בריקמן /Hard Cover Open Book Mockup1.png' }
+                { type: 'image', path: 'assets/books/yiftach-unit/Hard Cover Open Book Mockup1.png' }
             ]
         },
         'little-big': {
             tag: 'Book & Editorial Design',
             title: '“Little Big” Book Project',
-            desc: 'Vibrant editorial layout design and custom graphic illustrations for the "Little Big" book project. Utilizes saturated vector graphic styles, hand-painted digital layouts, and quirky font pairings to build a lively visual narrative.',
+            desc: 'This book is a personal creation—combining writing and illustration to bring to life stories born from childhood experiences, memories, and the moments that shaped me. Through words and drawings, it reflects my world in a unique way, filled with humor, emotion, and nostalgia. It is dedicated to my family, especially my older siblings, who filled my childhood with adventures, inspiration, and stories worth telling. This book is about the experiences that make us who we are—small, big, and everything in between.',
             media: [
                 { type: 'image', path: 'assets/books/little big/05.png' },
                 { type: 'image', path: 'assets/books/little big/06.png' },
@@ -123,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'pillowcase': {
             tag: 'Book & Editorial Design',
             title: '“Pillowcase” Book Design',
-            desc: 'Artistic editorial publication and material design for "Pillowcase". Features organic text wrap layouts, soft photographic spacing, and physical textured paper mockups that evoke comfort and tactility.',
+            desc: 'I created a book that explores intimacy through the lens of the bedroom—a space of emotion, connection, and quiet moments. Through poems, stories, and reflections, it captures the essence of home, where love, dreams, and solitude intertwine. Every page dives into the familiar yet personal atmosphere of the bedroom, turning everyday experiences into something poetic and meaningful. It’s a book about the spaces we retreat to, the feelings that arise within them, and the unspoken stories that make a house a home.',
             media: [
                 { type: 'image', path: 'assets/books/pilowcase/IMG_9720.jpeg' },
                 { type: 'image', path: 'assets/books/pilowcase/IMG_9721.jpeg' },
