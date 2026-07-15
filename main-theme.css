@@ -388,7 +388,7 @@ a {
     width: 120%; /* Scaled up to cover edges during organic displacement map distortion */
     height: 120%;
     z-index: 2;
-    background-color: #fc589f; /* Exact pink from the new image */
+    background-color: transparent; /* Transparent to let video background show through */
     background-image: 
         linear-gradient(to right, #d60e5a 1.5px, transparent 1.5px),
         linear-gradient(to bottom, #d60e5a 1.5px, transparent 1.5px);
@@ -2065,7 +2065,7 @@ a {
 
 /* 2. Hero Section (Pure Black background, Green grid/wave lines, Pink title) */
 .hero-grid-overlay {
-    background-color: #020203 !important; /* Pure Black bg */
+    background-color: transparent !important; /* Transparent so video background shows through */
     background-image: 
         linear-gradient(to right, rgba(0, 229, 109, 0.22) 1.5px, transparent 1.5px),
         linear-gradient(to bottom, rgba(0, 229, 109, 0.22) 1.5px, transparent 1.5px) !important; /* Neon Green grid lines */
