@@ -733,30 +733,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle Projects Button click handler removed — button now acts as a direct anchor link to work.html
 
-    // Swimming Duck bobbing and tilting ScrollTrigger
-    if (document.querySelector('.kind-words-section .duck')) {
-        const duck = document.querySelector('.kind-words-section .duck');
-        const waveAmplitude = 12; // Bobbing height in px
-        const waveFrequency = 3;  // Number of full waves
-        
-        gsap.to(duck, {
-            x: () => window.innerWidth + 300, // Swim fully off-screen right
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.kind-words-section',
-                start: 'top 85%',
-                end: 'bottom 15%',
-                scrub: 1, // Smooth scrolling scrub
-                invalidateOnRefresh: true,
-                onUpdate: self => {
-                    let progress = self.progress;
-                    // Calculate sine wave vertical position
-                    let y = Math.sin(progress * Math.PI * 2 * waveFrequency) * waveAmplitude;
-                    // Calculate cosine wave tilt angle (derivative of sine)
-                    let tilt = Math.cos(progress * Math.PI * 2 * waveFrequency) * 6; // degrees
-                    gsap.set(duck, { yPercent: y, rotate: tilt });
-                }
-            }
-        });
-    }
+
 });
