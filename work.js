@@ -240,8 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'As Fast as You Can',
             desc: 'The viewer, fixed in one moment, senses restlessness as events unfold elsewhere. Driven by a constant pursuit of diverse experiences, there\'s a desire to be part of something beyond the present, coupled with the fear of missing out on potentially better moments everywhere.',
             media: [
-                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_1.jpg' },
-                { type: 'image', path: 'assets/artistic/as-fast-as-you-can/asset_2.jpg' }
+                { type: 'video', path: 'assets/artistic/as-fast-as-you-can/shayyuz & reut yaffe.mp4' }
             ]
         },
         'brenda': {
