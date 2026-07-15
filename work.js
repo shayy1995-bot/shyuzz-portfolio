@@ -132,6 +132,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', path: 'assets/books/pilowcase/IMG_9723.jpeg' },
                 { type: 'image', path: 'assets/books/pilowcase/IMG_9725.jpeg' }
             ]
+        },
+        'haifa-summer': {
+            tag: 'Branding • Summer Campaign',
+            title: 'Haifa Tourism: Summer Campaign',
+            desc: 'Creative direction, layout structures, and detailed marketing banner designs executed for the official Haifa Tourism Summer Campaign. Focuses on high-contrast neon tones and layered summer branding elements for outdoor posters and social media suites.',
+            media: [
+                { type: 'image', path: 'assets/branding/haifa-tourism-dreamy-summer/DL-57593 Summer_2026_ Social4.jpg' },
+                { type: 'image', path: 'assets/branding/haifa-tourism-dreamy-summer/DL-57593 Summer_2026_ Social7.jpg' }
+            ]
+        },
+        'motherland': {
+            tag: 'Poster Series',
+            title: '“Motherland” Poster Series',
+            desc: 'A conceptual set of multilingual graphic posters exploring visual tension and identity. Integrates Hebrew and English typographic hierarchies with structured vector design blocks to represent historical dialogues.',
+            media: [
+                { type: 'image', path: 'assets/posters/Motherland/ENGLISH POSTERS.png' },
+                { type: 'image', path: 'assets/posters/Motherland/ENGLISH POSTERS2.png' },
+                { type: 'image', path: 'assets/posters/Motherland/ENGLISH POSTERS3.png' },
+                { type: 'image', path: 'assets/posters/Motherland/ENGLISH POSTERS5.png' },
+                { type: 'image', path: 'assets/posters/Motherland/HEBREW POSTERS .png' },
+                { type: 'image', path: 'assets/posters/Motherland/HEBREW POSTERS 2.png' },
+                { type: 'image', path: 'assets/posters/Motherland/HEBREW POSTERS 3.png' },
+                { type: 'image', path: 'assets/posters/Motherland/HEBREW POSTERS 5.png' }
+            ]
+        },
+        'cabin-exhibition': {
+            tag: 'Poster & Editorial',
+            title: '“Cabin” Exhibition Poster',
+            desc: 'Visual concept and poster layouts for the Cabin exhibition. Employs minimal graphic rules, textured papers, and a custom animated showcase GIF that highlights spatial design details.',
+            media: [
+                { type: 'image', path: 'assets/posters/cabin/MVX_POSTER_MOCKUP.png' },
+                { type: 'image', path: 'assets/posters/cabin/exhibition-text_Page_1.jpg' },
+                { type: 'image', path: 'assets/posters/cabin/exhibition-gif.gif' },
+                { type: 'image', path: 'assets/posters/cabin/Papers-Brand-Presentation-Design-Free-psd-Mockup.jpg' }
+            ]
+        },
+        'gido-concert': {
+            tag: 'Concert Poster & Identity',
+            title: 'Gido Concert Branding',
+            desc: 'Bold, high-energy event marketing campaign posters created for the Gido concert. Features customized title typography, social media banners, and digital template graphics optimized for pop-culture promotions.',
+            media: [
+                { type: 'image', path: 'assets/posters/gido concert/gido-and-ibish.png' },
+                { type: 'image', path: 'assets/posters/gido concert/gido-insta.jpg' },
+                { type: 'image', path: 'assets/posters/gido concert/facebook-cover.jpg' }
+            ]
+        },
+        'sharks-association': {
+            tag: 'Branding Posters',
+            title: 'Israel Sharks Association Posters',
+            desc: 'Environmental awareness poster campaign developed for the Israel Sharks Association. Uses structured typographic layouts and dramatic marine photography to engage public audiences in wildlife conservation.',
+            media: [
+                { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 1-100.jpg' },
+                { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 2-100.jpg' },
+                { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 1-8.png' },
+                { type: 'image', path: 'assets/posters/sharks-association-israel/Artboard 2-8.png' }
+            ]
         }
     };
 
