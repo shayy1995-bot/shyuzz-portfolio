@@ -477,13 +477,13 @@ document.addEventListener('DOMContentLoaded', () => {
         data.media.forEach(item => {
             if (item.type === 'image') {
                 const img = document.createElement('img');
-                img.src = encodeURI(item.path);
+                img.src = encodeURI('../' + item.path);
                 img.alt = data.title;
                 img.loading = 'lazy';
                 modalGallery.appendChild(img);
             } else if (item.type === 'video') {
                 const video = document.createElement('video');
-                video.src = encodeURI(item.path);
+                video.src = encodeURI('../' + item.path);
                 video.controls = true;
                 video.autoplay = true;
                 video.loop = true;
