@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyuzz Studio | All Works</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="main-theme.css?v=5.5">
+</head>
+<body style="background-color: #020203;">
+
+    <!-- Custom Cursor Follower -->
+    <div class="custom-cursor">
+        <span class="cursor-text">VIEW</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">shyuzz studio</a>
+            
+            <nav class="main-nav">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="social-links">
+                <div class="mini-gif-icon">
+                    <img src="assets/Devil.gif" alt="Devil icon" class="header-mini-gif">
+                </div>
+                <a href="https://www.instagram.com/shyuzz.studio/" target="_blank" aria-label="Instagram">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/shay.yuz" target="_blank" aria-label="Facebook">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Hamburger Button for mobile -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html#work" class="mobile-nav-link">Work</a>
+            <a href="index.html#about" class="mobile-nav-link">About</a>
+            <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main>
+        <section class="portfolio-grid-section">
+            <div class="portfolio-grid-header">
+                <span class="portfolio-subheading">selected case studies</span>
+                <h1 class="portfolio-heading">all projects</h1>
+            </div>
+
+            <!-- Filters (Idyllic Style select dropdowns styled with brand colors) -->
+            <div class="portfolio-filters">
+                <div class="filter-group">
+                    <select class="filter-select" id="filter-category">
+                        <option value="all">Category: All</option>
+                        <option value="branding">Branding</option>
+                        <option value="murals">Murals</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select" id="filter-style">
+                        <option value="all">Style: All</option>
+                        <option value="colorful">Colorful</option>
+                        <option value="pop-art">Pop-Art</option>
+                        <option value="minimal">Minimal</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 3-Column Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolio-grid">
+                
+                <!-- Papa Bakery -->
+                <div class="grid-item murals minimal" data-category="murals" data-style="minimal">
+                    <a href="#" class="grid-item-link" data-project-id="papa-bakery">
+                        <img src="assets/murals/Papa Bakery/IMG_3312.jpeg" alt="Papa Bakery Murals">
+                        <span class="name">
+                            Papa Bakery Murals
+                            <span class="tags">Mural, Commercial Spaces</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Gil Goren -->
+                <div class="grid-item branding colorful" data-category="branding" data-style="colorful">
+                    <a href="#" class="grid-item-link" data-project-id="gil-goren">
+                        <img src="assets/branding/“Can You See The Beauty” — Exhibition Design for Artist Gil Goren/rotator.png" alt="“Can You See The Beauty” — Gil Goren">
+                        <span class="name">
+                            Gil Goren Exhibition
+                            <span class="tags">Exhibition Design, Branding</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Red Bus -->
+                <div class="grid-item branding colorful" data-category="branding" data-style="colorful">
+                    <a href="#" class="grid-item-link" data-project-id="red-bus">
+                        <img src="assets/branding/Haifa Tourism The Red Bus Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png" alt="Haifa Tourism Red Bus">
+                        <span class="name">
+                            Tourism: Red Bus
+                            <span class="tags">Branding, Transport Design</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Branding Myself -->
+                <div class="grid-item branding colorful" data-category="branding" data-style="colorful">
+                    <a href="#" class="grid-item-link" data-project-id="branding-myself">
+                        <img src="assets/branding/branding Myself The Most Difficult Client/04e3a117-75b8-497b-804b-d801a6688faa.png" alt="Branding Myself">
+                        <span class="name">
+                            Branding Myself
+                            <span class="tags">Branding, Self-Identity</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Garin Tzabar -->
+                <div class="grid-item murals colorful" data-category="murals" data-style="colorful">
+                    <a href="#" class="grid-item-link" data-project-id="garin-tzabar">
+                        <img src="assets/murals/Garin Tzabar | Community Wall Art/sdסופי.png" alt="Garin Tzabar Mural">
+                        <span class="name">
+                            Garin Tzabar Mural
+                            <span class="tags">Environmental Art, Mural Design</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Pop Art Festival -->
+                <div class="grid-item branding pop-art" data-category="branding" data-style="pop-art">
+                    <a href="#" class="grid-item-link" data-project-id="pop-art">
+                        <img src="assets/branding/Pop Art Family Festival/DL-56246 POP ART FAMILIES.png" alt="Pop Art Festival">
+                        <span class="name">
+                            Pop Art Festival
+                            <span class="tags">Identity, Event Branding</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Museums Campaign -->
+                <div class="grid-item branding minimal" data-category="branding" data-style="minimal">
+                    <a href="#" class="grid-item-link" data-project-id="museums-campaign">
+                        <img src="assets/branding/Haifa Museums Promotional Poster Series/DL-57304 Passover HMS Banners פלזמה 1600x916.png" alt="Museums Campaign">
+                        <span class="name">
+                            Haifa Museums Campaign
+                            <span class="tags">Campaign, Editorial Poster</span>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Case Study Details Modal (Consistent with home page modal) -->
+    <div class="project-modal" id="project-modal">
+        <button class="modal-close-btn" aria-label="Close Case Study">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-scroll-container">
+            <div class="modal-header">
+                <span class="modal-tag" id="modal-tag">Branding</span>
+                <h2 class="modal-title" id="modal-title">Project Title</h2>
+                <div class="modal-desc-container">
+                    <p class="modal-desc" id="modal-desc">Project description goes here...</p>
+                </div>
+            </div>
+            
+            <div class="modal-gallery" id="modal-gallery">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG Filter for organic fluid warping -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+        <defs>
+            <filter id="organicWarp">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.012" numOctaves="2" result="noise">
+                    <animate attributeName="baseFrequency" values="0.009 0.009; 0.015 0.015; 0.009 0.009" dur="18s" repeatCount="indefinite" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Page Javascript -->
+    <script src="work.js?v=5.5"></script>
+</body>
+</html>
