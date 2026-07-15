@@ -366,8 +366,8 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8; /* More prominent now that grid overlay is removed */
-    filter: hue-rotate(295deg) saturate(2) contrast(1.1) brightness(0.9); /* Shifting video colors to beautiful brand pink/magenta */
+    opacity: 0.8;
+    /* Original colors preserved — no filter */
 }
 
 .hero-video-overlay {
