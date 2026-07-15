@@ -279,19 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Beyond Boundaries: Wizo Showcase',
             desc: 'As a \"Wizo\" student I participated in the team of the Design college graduation exhibition, we were tasked with developing the branding for this prestigious event.',
             media: [
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_1.gif' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_1.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_2.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_3.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_4.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_4.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_5.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_6.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_8.png' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_7.jpg' },
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_8.jpg' },
                 { type: 'image', path: 'assets/branding/beyond-boundaries/asset_9.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_11.jpg' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_12.png' },
-                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_13.png' }
+                { type: 'image', path: 'assets/branding/beyond-boundaries/asset_10.jpg' }
             ]
         }
     };
