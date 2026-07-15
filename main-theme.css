@@ -395,8 +395,8 @@ a {
 }
 
 .hero-title-img {
-    max-width: 95%;
-    width: 1560px;
+    width: 95vw;
+    max-width: 95vw;
     height: auto;
     display: block;
 }
