@@ -571,7 +571,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Block body scroll
+        // Block background scroll
+        document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
 
         // Animate modal open
@@ -591,7 +592,8 @@ document.addEventListener('DOMContentLoaded', () => {
             onComplete: () => {
                 gsap.set(modal, { display: 'none' });
                 // Restore scroll
-                document.body.style.overflow = 'auto';
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
             }
         });
     };
