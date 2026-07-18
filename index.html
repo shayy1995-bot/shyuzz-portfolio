@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700;1,800&family=Syne:wght@700;800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
     
     <!-- CSS Style -->
-    <link rel="stylesheet" href="main-theme.css?v=5.42">
+    <link rel="stylesheet" href="main-theme.css?v=5.43">
 </head>
 <body>
 
@@ -505,8 +505,6 @@
             <!-- Panel 5: Pure Black Background for Contact and Footer -->
             <div class="scroll-color-panel" data-bg-color="#020203">
 
-
-                <!-- Contact Section -->
             <section id="contact" class="contact-section">
                 
                 <!-- Infinite Marquee -->
@@ -520,49 +518,33 @@
                 </div>
 
                 <div class="contact-container">
-                    <div class="contact-grid">
-                        
-                        <div class="contact-details">
-                            <h3 class="contact-heading">Let's start a project together!</h3>
-                            <p class="contact-p">Have an interesting idea, a wall that needs life, or a brand that needs redefining? Drop me a line and let's talk.</p>
+                    <div class="contact-grid-split">
+                        <!-- Left side: The custom GIF -->
+                        <div class="contact-media-wrapper">
+                            <img src="assets/bottom-section/bottom_gif.gif" alt="Shyuzz Creative Vibe" class="contact-gif-media" onerror="this.src='assets/דגי_דג.gif'">
+                        </div>
+
+                        <!-- Right side: The text and contact links styled like the form -->
+                        <div class="contact-info-wrapper">
+                            <h2 class="contact-split-heading">
+                                DON'T BE SHY,<br>SAY HELLO!
+                            </h2>
                             
-                            <div class="contact-items">
-                                <div class="contact-item">
-                                    <span class="contact-label">Mobile</span>
-                                    <a href="tel:+972526502054" class="contact-link">+972-52-6502054</a>
+                            <div class="contact-links-list">
+                                <div class="contact-link-row">
+                                    <span class="contact-link-label">Email</span>
+                                    <a href="mailto:shayy1995@gmail.com" class="contact-link-value">shayy1995@gmail.com</a>
                                 </div>
-                                <div class="contact-item">
-                                    <span class="contact-label">Email</span>
-                                    <a href="mailto:shayy1995@gmail.com" class="contact-link">shayy1995@gmail.com</a>
+                                <div class="contact-link-row">
+                                    <span class="contact-link-label">Phone / WhatsApp</span>
+                                    <a href="tel:+972526502054" class="contact-link-value">+972-52-6502054</a>
+                                </div>
+                                <div class="contact-link-row">
+                                    <span class="contact-link-label">Instagram</span>
+                                    <a href="https://www.instagram.com/shyuzz.studio/" target="_blank" class="contact-link-value">@shyuzz.studio</a>
                                 </div>
                             </div>
-                            
-
                         </div>
-
-                        <div class="contact-form-wrapper">
-                            <form class="contact-form" action="#" method="POST">
-                                <div class="form-group">
-                                    <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
-                                    <label for="name" class="form-label">Full Name</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
-                                    <label for="email" class="form-label">Email Address</label>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="message" name="message" class="form-input" rows="4" placeholder=" " required></textarea>
-                                    <label for="message" class="form-label">What's on your mind?</label>
-                                </div>
-                                <button type="submit" class="submit-btn">
-                                    <span>Send Message</span>
-                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-
                     </div>
 
                     <!-- Footer -->
@@ -617,6 +599,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- Main JS Code -->
-    <script src="index.js?v=5.42"></script>
+    <script src="index.js?v=5.43"></script>
 </body>
 </html>

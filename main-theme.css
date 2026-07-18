@@ -1603,144 +1603,86 @@ a {
     padding: 80px var(--container-padding) 40px var(--container-padding);
 }
 
-.contact-grid {
+.contact-grid-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
+    align-items: center;
     margin-bottom: 6rem;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
-}
-
-.contact-heading {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-}
-
-.contact-p {
-    font-size: 16px;
-    color: var(--color-text-muted);
-}
-
-.contact-items {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--color-green);
-    text-transform: uppercase;
-}
-
-.contact-link {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--color-text);
-}
-
-.contact-link:hover {
-    color: var(--color-magenta);
-}
-
-/* Integrated Cheeky GIF in Contact Section */
-.contact-cheeky-gif {
-    margin-top: 2rem;
-    width: 90px;
-    height: 90px;
-    border-radius: 8px;
+.contact-media-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.05);
+    background-color: #0c0c0e;
 }
 
-.mini-fuck-gif {
+.contact-gif-media {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Form Styles */
-.contact-form {
+.contact-info-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
-.form-group {
-    position: relative;
-    width: 100%;
+.contact-split-heading {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 1.05;
+    color: var(--color-magenta);
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
-.form-input {
-    width: 100%;
-    background: transparent;
-    border: none;
+.contact-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contact-link-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 0;
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--color-text);
-    outline: none;
     transition: border-color 0.3s ease;
 }
 
-.form-input:focus {
+.contact-link-row:hover {
     border-color: var(--color-green);
 }
 
-.form-label {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--color-text-muted);
-    pointer-events: none;
-    transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-    transform-origin: left top;
-}
-
-/* Floating Label Animation */
-.form-input:focus ~ .form-label,
-.form-input:not(:placeholder-shown) ~ .form-label {
-    transform: translateY(-24px);
-    font-size: 12px;
+.contact-link-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
     color: var(--color-green);
-    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.submit-btn {
-    align-self: flex-start;
-    background-color: var(--color-green);
-    color: var(--color-text-white);
-    border: none;
-    padding: 1rem 2.2rem;
-    font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: var(--transition-smooth);
+.contact-link-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
-.submit-btn:hover {
-    background-color: var(--color-magenta);
-    transform: scale(1.03);
+.contact-link-row:hover .contact-link-value {
+    color: var(--color-magenta);
+    transform: translateX(4px);
 }
 
 /* Footer Copyright */
@@ -1918,7 +1860,7 @@ a {
         width: 45vw !important;
     }
     
-    .about-grid, .contact-grid {
+    .about-grid, .contact-grid-split {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
@@ -2204,11 +2146,12 @@ a {
     }
 
     /* ── שלב 4: Contact form mobile ── */
-    .contact-grid {
+    .contact-grid-split {
+        grid-template-columns: 1fr !important;
         gap: 3rem !important;
     }
-    .contact-info h2 {
-        font-size: clamp(2rem, 7vw, 3rem) !important;
+    .contact-split-heading {
+        font-size: clamp(2.2rem, 7vw, 3.2rem) !important;
     }
 
     /* ── שלב 4: Footer ── */
