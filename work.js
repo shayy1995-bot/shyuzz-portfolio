@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Haifa Tourism: The Red Bus Design',
             desc: 'Visual concept and detailed graphic design mapping for Haifa\'s official tourism double-decker bus, adding character and vibrant local identity to the streetscape. The wrapping layout integrates illustrative and graphic elements, showing the historical tourist attractions of the city of Haifa.',
             media: [
-                { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/Gemini_Generated_Image_oadmpxoadmpxoadm.png' },
                 { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/qr sticker_Page_1_Image_0001.png' },
                 { type: 'image', path: 'assets/branding/Haifa Tourism The Red Bus Design/qr sticker_Page_2_Image_0001.png' }
             ]
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             media: [
                 { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/540514125_1171119641713980_4907827523360123064_n.jpg' },
                 { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/538530753_1171119625047315_2672241607695226882_n.jpg' },
-                { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/sd_.png' },
+                { type: 'image', path: 'assets/murals/Garin Tzabar | Community Wall Art/sdסופי.png' },
                 { type: 'video', path: 'assets/murals/Garin Tzabar | Community Wall Art/Untitled.mp4' }
             ]
         },
@@ -111,6 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'image', path: 'assets/branding/Haifa Museums Promotional Poster Series/DL-56083 Japan Craft post2.jpeg' },
                 { type: 'image', path: 'assets/branding/Haifa Museums Promotional Poster Series/DL-56421 41th Film Festival Ad.jpg' },
                 { type: 'image', path: 'assets/branding/Haifa Museums Promotional Poster Series/DL-56422 Tisrei Holiday AD.jpg' }
+            ]
+        },
+        'bayer': {
+            tag: 'Identity • Marketing Suite',
+            title: 'Bayer: Annual Cycle 2026',
+            desc: 'Branding campaign and marketing materials designed for Bayer\'s 2026 Annual Cycle, creating a consistent and premium visual identity for corporate communications. Developed as part of my work at “Dotan-Lidgi” Studio.',
+            media: [
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-24 at 16.20.58.jpeg' },
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-24 at 16.20.59.jpeg' },
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-13 at 09.28.03.jpeg' },
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-24 at 16.22.20.jpeg' },
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-24 at 16.22.20 (1).jpeg' },
+                { type: 'image', path: 'assets/branding/bayer/Annual Cycle 2026/WhatsApp Image 2026-05-24 at 16.22.20 (2).jpeg' }
+            ]
+        },
+        'haifa-magical-summer': {
+            tag: 'Identity • Campaign Design',
+            title: 'Haifa Tourism: Magical Summer',
+            desc: 'Visual language and marketing materials created for Haifa\'s Magical Summer campaign, inviting locals and tourists to experience the city\'s enchanting summer events. Developed as part of my work at “Dotan-Lidgi” Studio.',
+            media: [
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/DL-57593 Summer 2026 - Facebook.jpg' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/DL-57593 Summer 2026 - Facebook3.png' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/DL-57593 Summer 2026 - Facebook6.png' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/ChatGPT Image Jun 30, 2026, 01_18_03 PM.png' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/DL-00000 Summer 2026 - Posts & Stories July 13.jpg' },
+                { type: 'image', path: 'assets/branding/Haifa Tourism magical summer/DL-00000 Summer 2026 - Posts & Stories July 15.jpg' }
             ]
         },
         'strange-addiction': {
