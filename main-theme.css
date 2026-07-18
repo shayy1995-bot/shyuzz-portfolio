@@ -1640,18 +1640,19 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #020203; /* Pure Black matching site theme */
+    background-color: #0b1c12; /* Deep Brutalist Forest Green */
     padding: 6rem 5rem;
     gap: 3rem;
 }
 
 .contact-split-heading {
-    font-family: 'Bodoni Moda', 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 4vw, 3.8rem);
-    line-height: 1.05;
-    color: var(--color-magenta); /* Neon Pink matching her brand accent */
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    line-height: 1.1;
+    color: #ffffff; /* Crisp white for maximum readability */
     text-transform: uppercase;
     font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 .contact-links-list {
