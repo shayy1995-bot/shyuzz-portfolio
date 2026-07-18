@@ -1089,13 +1089,6 @@ a {
 
 .project-img {
     width: 100%;
-    height: 130%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: -15%;
-    left: 0;
-    will-change: transform;
 }
 
 .project-details-layout {
@@ -1204,6 +1197,14 @@ a {
 .panelc {
     width: 100vw; /* Idyllic: width: 100vw */
     position: relative;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.panelc.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .panelc.hide {
@@ -1224,8 +1225,7 @@ a {
 /* Gallery Sizing & Staggering */
 .gallery-wrap {
     transform: scale(1);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
+    transition: all ease 0.25s;
 }
 
 .gallery {
@@ -1233,22 +1233,18 @@ a {
     margin: 0 auto;
     margin-top: -12vw; /* Idyllic: margin-top: -12vw — creates vertical overlap */
     position: relative;
-    aspect-ratio: 1 / 1; /* Perfect 1:1 squares */
-    border-radius: 0px; /* Sharp brutalist corners */
+    border-radius: 0px;
     overflow: hidden;
 }
 
 .gallery img {
     width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
 }
 
 /* Hover Zoom interaction on the project squares */
 .gallery-wrap:hover {
     cursor: pointer;
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .panelc .project-block {
@@ -2135,13 +2131,9 @@ a {
         bottom: 0 !important;
     }
 
-    /* ── שלב 4: Parallax images — disable on mobile ── */
+    /* ── שלב 4: project images — simple width ── */
     .project-img {
-        position: relative !important;
-        top: 0 !important;
-        height: 100% !important;
         width: 100% !important;
-        object-fit: cover !important;
     }
 
     /* ── שלב 4: Work page filter group width ── */
