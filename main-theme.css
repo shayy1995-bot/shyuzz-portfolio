@@ -1603,21 +1603,30 @@ a {
     padding: 80px var(--container-padding) 40px var(--container-padding);
 }
 
-.contact-grid-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-    margin-bottom: 6rem;
+.contact-container-full {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.contact-media-wrapper {
+.contact-grid-split {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 0;
+    min-height: 600px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-media-column {
     width: 100%;
-    aspect-ratio: 16 / 10;
+    height: 100%;
     overflow: hidden;
-    border-radius: 12px;
-    border: 3px solid rgba(255, 255, 255, 0.05);
-    background-color: #0c0c0e;
+    background-color: #020203;
+    display: flex;
+    align-items: stretch;
 }
 
 .contact-gif-media {
@@ -1627,17 +1636,20 @@ a {
     display: block;
 }
 
-.contact-info-wrapper {
+.contact-info-column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: #401118; /* Dark Burgundy matching user screenshot */
+    padding: 6rem 5rem;
     gap: 3rem;
 }
 
 .contact-split-heading {
     font-family: 'Bodoni Moda', 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
     line-height: 1.05;
-    color: var(--color-magenta);
+    color: #ffffff; /* White font color as requested */
     text-transform: uppercase;
     font-weight: 800;
 }
@@ -1688,7 +1700,7 @@ a {
 /* Footer Copyright */
 .main-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 2rem;
+    padding: 3rem var(--container-padding) 2rem var(--container-padding);
     display: flex;
     justify-content: center;
 }
@@ -2148,10 +2160,17 @@ a {
     /* ── שלב 4: Contact form mobile ── */
     .contact-grid-split {
         grid-template-columns: 1fr !important;
-        gap: 3rem !important;
+        gap: 0 !important;
+    }
+    .contact-media-column {
+        height: 300px !important;
+    }
+    .contact-info-column {
+        padding: 4rem 1.8rem !important;
+        gap: 2.5rem !important;
     }
     .contact-split-heading {
-        font-size: clamp(2.2rem, 7vw, 3.2rem) !important;
+        font-size: clamp(1.8rem, 6vw, 2.8rem) !important;
     }
 
     /* ── שלב 4: Footer ── */
