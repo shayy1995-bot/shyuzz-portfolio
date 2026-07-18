@@ -1369,11 +1369,19 @@ a {
 }
 
 .about-badge {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--color-green);
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    background-color: var(--color-green);
+    color: #020203;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 0px #ffffff;
+    margin-bottom: 1.5rem;
 }
 
 .about-intro-title {
