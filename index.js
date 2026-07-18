@@ -652,57 +652,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     // =========================================================================
-    // Fixed Background "Work" Text — Show/Hide on Scroll
-    // Matches Idyllic EXACT behavior: simple scroll position check with fadeIn/fadeOut
+    // Fixed Background "Work" Text — Show/Hide via ScrollTrigger
+    // Matches Idyllic behavior: fadeIn/fadeOut when scroll is between .workon and .workoff
     // =========================================================================
     const workBgText = document.querySelector('.work-background-text');
     const workonEl = document.querySelector('.workon');
     const workoffEl = document.querySelector('.workoff');
     
     if (workBgText && workonEl && workoffEl) {
-        workBgText.style.display = 'none';
+        // Initialize state
+        gsap.set(workBgText, { display: 'none', opacity: 0 });
         
-        const checkWorkText = () => {
-            const scrollTop = window.scrollY;
-            const halfWindow = window.innerHeight / 2;
-            const workonTop = workonEl.getBoundingClientRect().top + scrollTop;
-            const workoffTop = workoffEl.getBoundingClientRect().top + scrollTop;
-            
-            if (scrollTop > (workonTop - halfWindow) && scrollTop < (workoffTop - halfWindow)) {
-                if (workBgText.style.display === 'none') {
-                    workBgText.style.display = 'block';
-                    gsap.to(workBgText, { opacity: 1, duration: 0.4, ease: 'power2.out' });
-                }
-            } else {
-                if (workBgText.style.display !== 'none') {
-                    gsap.to(workBgText, { opacity: 0, duration: 0.3, ease: 'power2.in', onComplete: () => { workBgText.style.display = 'none'; } });
-                }
+        ScrollTrigger.create({
+            trigger: workonEl,
+            start: 'top 50%', // When top of .workon crosses 50% height of viewport
+            endTrigger: workoffEl,
+            end: 'top 50%', // When top of .workoff crosses 50% height of viewport
+            onEnter: () => {
+                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
+            },
+            onLeave: () => {
+                gsap.to(workBgText, { 
+                    opacity: 0, 
+                    duration: 0.4, 
+                    ease: 'power2.in', 
+                    overwrite: 'auto', 
+                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
+                });
+            },
+            onEnterBack: () => {
+                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
+            },
+            onLeaveBack: () => {
+                gsap.to(workBgText, { 
+                    opacity: 0, 
+                    duration: 0.4, 
+                    ease: 'power2.in', 
+                    overwrite: 'auto', 
+                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
+                });
             }
-        };
-        
-        window.addEventListener('scroll', checkWorkText, { passive: true });
+        });
     }
 
     // =========================================================================
-    // Scroll Reveal for Project Panels — Idyllic style (CSS class "in-view")
-    // Each .panelc gets class "in-view" when it enters the viewport
+    // Scroll Reveal Animations for Project Panels (Optimized ScrollTrigger)
+    // Matches Idyllic layout reveal with buttery smooth performance
     // =========================================================================
-    const allPanels = document.querySelectorAll('.panelc');
-    const checkPanels = () => {
-        const windowHeight = window.innerHeight;
-        const scrollTop = window.scrollY;
-        const viewBottom = scrollTop + windowHeight;
-        
-        allPanels.forEach((panel) => {
-            const panelTop = panel.getBoundingClientRect().top + scrollTop;
-            const panelHeight = panel.offsetHeight;
-            if (panelTop + panelHeight >= scrollTop && panelTop <= viewBottom - 200) {
-                panel.classList.add('in-view');
-            }
-        });
-    };
-    window.addEventListener('scroll', checkPanels, { passive: true });
-    checkPanels(); // Initial check
+    document.querySelectorAll('.panelc').forEach((panel) => {
+        const galleryWrap = panel.querySelector('.gallery-wrap');
+        if (galleryWrap) {
+            const isMobile = window.innerWidth <= 768;
+            gsap.fromTo(galleryWrap, 
+                { opacity: 0, y: isMobile ? 40 : 80 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: isMobile ? 0.6 : 1.0,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: panel,
+                        start: 'top 92%', // start reveal when panel is near bottom of viewport
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+    });
 
 
     // Toggle Projects Button click handler removed — button now acts as a direct anchor link to work.html
