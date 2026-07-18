@@ -2035,6 +2035,157 @@ a {
     .portfolio-grid-header {
         padding-top: 60px !important;
     }
+
+    /* ── שלב 1: Story Section — stack vertically on mobile ── */
+    .story-fixed-scroll-row {
+        flex-direction: column !important;
+    }
+    .fixed-media-column {
+        position: relative !important;
+        width: 100% !important;
+        height: 55vw !important;
+        min-height: 240px !important;
+        max-height: 420px !important;
+    }
+    .scroll-text-column {
+        width: 100% !important;
+        padding: 5vw 5vw 8vw 5vw !important;
+        gap: 8vh !important;
+    }
+    .story-text-block h2 {
+        font-size: clamp(1.8rem, 6vw, 2.8rem) !important;
+    }
+    .story-text-block p {
+        font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+    }
+
+    /* ── שלב 2: Section padding overrides ── */
+    .massive-banner-section {
+        padding: 60px 0 !important;
+    }
+    .massive-text {
+        font-size: clamp(1.8rem, 8vw, 4rem) !important;
+    }
+    #notgoodat {
+        padding: 60px 0 !important;
+    }
+    .work-section {
+        padding: 80px 0 !important;
+    }
+    .about-section {
+        padding: 80px 0 !important;
+    }
+    .contact-section {
+        padding: 60px 0 0 0 !important;
+    }
+
+    /* ── שלב 3: Typography — fix broken notgoodat clamp ── */
+    #notgoodat span {
+        font-size: clamp(1.4rem, 5vw, 2.2rem) !important;
+    }
+
+    /* ── שלב 3: Buttons — fluid width ── */
+    .view-more-custom-btn {
+        width: 90% !important;
+        max-width: 360px !important;
+        height: 64px !important;
+        font-size: 1rem !important;
+    }
+
+    /* ── שלב 4: About sticker — prevent negative overflow ── */
+    .about-frame-sticker {
+        left: 0 !important;
+        bottom: 0 !important;
+    }
+
+    /* ── שלב 4: Parallax images — disable on mobile ── */
+    .project-img {
+        position: relative !important;
+        top: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* ── שלב 4: Work page filter group width ── */
+    .filter-group {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .filter-select {
+        width: 100% !important;
+    }
+
+    /* ── שלב 4: Contact form mobile ── */
+    .contact-grid {
+        gap: 3rem !important;
+    }
+    .contact-info h2 {
+        font-size: clamp(2rem, 7vw, 3rem) !important;
+    }
+
+    /* ── שלב 4: Footer ── */
+    .main-footer {
+        padding: 2rem 1.5rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ==========================================================================
+   480px — Small phones (iPhone SE, iPhone mini)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .hero-title-img {
+        width: 98vw !important;
+        max-width: 98vw !important;
+    }
+
+    .main-header {
+        padding: 0.5rem 1rem !important;
+        left: 3% !important;
+        width: 94% !important;
+    }
+
+    .massive-text {
+        font-size: clamp(1.5rem, 7vw, 2.5rem) !important;
+        padding: 0 1rem !important;
+    }
+
+    #notgoodat span {
+        font-size: clamp(1.2rem, 4.5vw, 1.8rem) !important;
+    }
+
+    .fixed-media-column {
+        height: 60vw !important;
+    }
+
+    .view-more-custom-btn {
+        width: 95% !important;
+        height: 58px !important;
+    }
+
+    .modal-scroll-container {
+        padding: 5rem 1rem 3rem 1rem !important;
+    }
+
+    .portfolio-grid-header {
+        padding-top: 80px !important;
+    }
+}
+
+/* ==========================================================================
+   prefers-reduced-motion — Respect system accessibility setting
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .image-marquee__track,
+    .top-marquee-inner,
+    .marquee-lane,
+    .badge-svg {
+        animation-play-state: paused !important;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* ==========================================================================
