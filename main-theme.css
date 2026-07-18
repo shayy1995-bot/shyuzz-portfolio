@@ -1640,7 +1640,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #0b1c12; /* Deep Brutalist Forest Green */
+    background-color: var(--color-magenta); /* Glowing Neon Pink matching brand */
     padding: 6rem 5rem;
     gap: 3rem;
 }
@@ -1649,7 +1649,7 @@ a {
     font-family: 'Syne', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3.6rem);
     line-height: 1.1;
-    color: #ffffff; /* Crisp white for maximum readability */
+    color: #020203; /* Pure black for maximum readability on pink background */
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -1666,19 +1666,19 @@ a {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.5rem 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(2, 2, 3, 0.12);
     transition: border-color 0.3s ease;
 }
 
 .contact-link-row:hover {
-    border-color: var(--color-green);
+    border-color: #020203;
 }
 
 .contact-link-label {
     font-family: 'Outfit', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: var(--color-green);
+    color: rgba(2, 2, 3, 0.6);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1687,14 +1687,14 @@ a {
     font-family: 'Outfit', sans-serif;
     font-size: clamp(1.3rem, 2vw, 1.8rem);
     font-weight: 600;
-    color: #ffffff;
+    color: #020203;
     text-decoration: none !important;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }
 
 .contact-link-row:hover .contact-link-value {
-    color: var(--color-magenta);
+    color: #ffffff; /* Turn white on hover */
     transform: translateX(4px);
 }
 
