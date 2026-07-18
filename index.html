@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@1,700;1,800&family=Caveat:wght@700&family=Mr+Dafoe&display=swap" rel="stylesheet">
     
     <!-- CSS Style -->
-    <link rel="stylesheet" href="main-theme.css?v=5.37">
+    <link rel="stylesheet" href="main-theme.css?v=5.38">
 </head>
 <body>
 
@@ -429,40 +429,64 @@
             <div class="scroll-color-panel" data-bg-color="#020203">
                 <!-- About Section (Editorial Layout) -->
             <section id="about" class="about-section">
+                <!-- Floating Ambient Cutouts (Idyllic Style) -->
+                <div class="wall-images">
+                    <img src="assets/גלגל_הצלה.gif" alt="" class="wall-1 reveal">
+                    <img src="assets/טלפון.gif" alt="" class="wall-2 reveal">
+                </div>
+
                 <div class="about-container">
-                    <div class="about-grid">
-                        
-                        <div class="about-text-content">
-                            <span class="about-badge">Nice to meet you</span>
-                            
-                            <!-- Integrated Bubble Shay GIF next to about title -->
-                            <h2 class="about-title">
-                                <span class="reveal-text">It's Me Time :)</span>
-                                <br><span class="reveal-text" style="color: var(--color-magenta);">Shay Yuz</span>
-                            </h2>
-                            <p class="about-p">I'm Shay, a graphic and brand designer passionate about turning stories into unforgettable visual experiences. I believe great design should stand out, surprise, and balance clear aesthetic rules with a healthy dose of sass and creativity.</p>
-                            <p class="about-p">Whether it's a museum exhibition, a large conference branding, a book design, or a mural - I infuse it with rich colors and strong typography that leave a lasting mark.</p>
-                            
-                            <div class="skills-chips">
-                                <span class="skill-chip">Branding & Identity</span>
-                                <span class="skill-chip">Exhibition & Spatial Design</span>
-                                <span class="skill-chip">Book & Editorial Design</span>
-                                <span class="skill-chip">Typography</span>
-                                <span class="skill-chip">Digital Illustration</span>
+                    <div class="about-intro-wrap">
+                        <span class="about-badge">Nice to meet you</span>
+                        <h2 class="about-intro-title">Welcome to my slightly chaotic creative space.</h2>
+                        <p class="about-intro-text">
+                            Where design rules get bent, typography is treated like royalty, and boring minimalism is banned. 
+                            I'm Shay, a graphic and brand designer passionate about turning stories into unforgettable visual experiences. 
+                            I believe great design should stand out, surprise, and balance clear aesthetic rules with a healthy dose of sass and creativity.
+                        </p>
+                    </div>
+
+                    <!-- The Gang / The Roles I Play (Idyllic Team Style Grid) -->
+                    <div class="people__grid">
+                        <div class="people__row row-about">
+                            <!-- Person 1: Creative Director -->
+                            <div class="person person-1 reveal">
+                                <div class="person__image">
+                                    <img src="assets/Bubble_Shay.gif" alt="The Visionary" class="person-img">
+                                </div>
+                                <h4 class="person__name">The Director</h4>
+                                <div class="person__position">Creative Vision & Chaos</div>
+                                <div class="person__fact">Translates big ideas into bold layouts</div>
+                            </div>
+
+                            <!-- Person 2: Font Obsessive -->
+                            <div class="person person-2 reveal">
+                                <div class="person__image">
+                                    <img src="assets/דגי_דג.gif" alt="The Font Obsessive" class="person-img">
+                                </div>
+                                <h4 class="person__name">The Typographer</h4>
+                                <div class="person__position">Pixel-Perfect Layouts</div>
+                                <div class="person__fact">Physically hurts when seeing bad kerning</div>
+                            </div>
+
+                            <!-- Person 3: Sassy Coordinator -->
+                            <div class="person person-3 reveal">
+                                <div class="person__image">
+                                    <img src="assets/קוסם_כתום.gif" alt="The Sassy Coordinator" class="person-img">
+                                </div>
+                                <h4 class="person__name">The Sassy Mind</h4>
+                                <div class="person__position">Coffee & Sarcasm Injector</div>
+                                <div class="person__fact">Fueled by double espressos & disruption</div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="about-visual">
-                            <div class="about-image-wrapper">
-                                <div class="about-image-placeholder">
-                                    <span class="placeholder-text">Shay Yuz</span>
-                                </div>
-                                <div class="about-frame-sticker">
-                                    SASSY CREATIVE
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="skills-chips">
+                        <span class="skill-chip">Branding & Identity</span>
+                        <span class="skill-chip">Exhibition & Spatial Design</span>
+                        <span class="skill-chip">Book & Editorial Design</span>
+                        <span class="skill-chip">Typography</span>
+                        <span class="skill-chip">Digital Illustration</span>
                     </div>
                 </div>
             </section>
@@ -583,6 +607,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- Main JS Code -->
-    <script src="index.js?v=5.37"></script>
+    <script src="index.js?v=5.38"></script>
 </body>
 </html>
