@@ -299,19 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Scroll Trigger Reveals for Project Blocks
     projectBlocks.forEach((card) => {
-        // Fade & Slide up project card
-        gsap.from(card, {
-            opacity: 0,
-            y: 70,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 88%',
-                toggleActions: 'play none none none'
-            }
-        });
-
         // Image Parallax scroll effect
         const img = card.querySelector('.project-img');
         if (img) {
@@ -697,8 +684,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.set(workBgText, { display: 'none', opacity: 0 });
         
         ScrollTrigger.create({
-            trigger: workon,
-            start: 'top 50%', // When .workon reaches the middle of the screen
+            trigger: '#work',
+            start: 'top 10%', // When the work section is near the top of the viewport
             onEnter: () => {
                 gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.6, ease: 'power2.out', overwrite: 'auto' });
             },
