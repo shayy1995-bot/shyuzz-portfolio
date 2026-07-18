@@ -1160,7 +1160,6 @@ a {
 .portsection {
     position: relative;
     width: 100vw;
-    overflow-x: hidden;
     min-height: 100vh; /* Idyllic: min-height: 100vh */
     z-index: 99; /* Idyllic: z-index: 99 — ABOVE the fixed Work text */
     margin-top: 20vw; /* Idyllic: margin-top: 20vw */
