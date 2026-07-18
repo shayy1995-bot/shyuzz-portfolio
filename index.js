@@ -713,17 +713,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.panelc').forEach((panel) => {
         const galleryWrap = panel.querySelector('.gallery-wrap');
         if (galleryWrap) {
+            const isMobile = window.innerWidth <= 768;
             gsap.fromTo(galleryWrap, 
-                { opacity: 0, y: 100 },
+                { opacity: 0, y: isMobile ? 40 : 100 },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 1.2,
+                    duration: isMobile ? 0.7 : 1.2,
                     ease: 'power2.out',
                     scrollTrigger: {
                         trigger: panel,
-                        start: 'top 85%',
-                        toggleActions: 'play none none reverse'
+                        start: 'top 90%',
+                        // On mobile: play once and stay — no reverse that causes flickering
+                        toggleActions: isMobile ? 'play none none none' : 'play none none reverse'
                     }
                 }
             );

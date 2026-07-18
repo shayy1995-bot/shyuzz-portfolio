@@ -2064,7 +2064,22 @@ a {
         padding: 60px 0 !important;
     }
     .massive-text {
-        font-size: clamp(1.8rem, 8vw, 4rem) !important;
+        font-size: clamp(2.2rem, 9vw, 5rem) !important;
+        text-align: center !important;
+        padding: 0 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+    .magnificent-text {
+        font-size: 1em !important;
+    }
+
+    /* ── notgoodat title — fix nowrap and size ── */
+    #notgoodat h3.notgoodat-title {
+        white-space: normal !important;
+        font-size: clamp(0.65rem, 2.8vw, 0.9rem) !important;
+        padding: 0 1.5rem !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 24px !important;
     }
     #notgoodat {
         padding: 60px 0 !important;
