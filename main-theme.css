@@ -1201,8 +1201,8 @@ a {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
-    width: 360px;
-    height: 86px; /* Ratio 4.2 matching the new arrow shape */
+    width: 520px;
+    height: 124px; /* Scaled proportionally for larger view */
     cursor: pointer;
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2052,7 +2052,7 @@ a {
     /* ── שלב 3: Buttons — fluid width ── */
     .view-more-custom-btn {
         width: 90% !important;
-        max-width: 360px !important;
+        max-width: 460px !important;
         height: auto !important; /* Let aspect ratio scale naturally */
     }
 
@@ -2166,7 +2166,8 @@ a {
 
     .view-more-custom-btn {
         width: 95% !important;
-        height: 58px !important;
+        max-width: 440px !important;
+        height: auto !important;
     }
 
     .modal-scroll-container {
