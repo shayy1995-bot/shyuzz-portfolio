@@ -653,44 +653,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // =========================================================================
     // Fixed Background "Work" Text — Show/Hide via ScrollTrigger
-    // Matches Idyllic behavior: fadeIn/fadeOut when scroll is between .workon and .workoff
+    // Fades in ONLY when scrolling through the #work section (.workon to .workoff)
     // =========================================================================
     const workBgText = document.querySelector('.work-background-text');
     const workonEl = document.querySelector('.workon');
     const workoffEl = document.querySelector('.workoff');
     
     if (workBgText && workonEl && workoffEl) {
-        // Initialize state
-        gsap.set(workBgText, { display: 'none', opacity: 0 });
+        // Initialize state as hidden
+        gsap.set(workBgText, { display: 'none', opacity: 0, visibility: 'hidden' });
         
         ScrollTrigger.create({
             trigger: workonEl,
-            start: 'top 50%', // When top of .workon crosses 50% height of viewport
+            start: 'top 70%',
             endTrigger: workoffEl,
-            end: 'top 50%', // When top of .workoff crosses 50% height of viewport
-            onEnter: () => {
-                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
+            end: 'bottom 30%',
+            onToggle: (self) => {
+                if (self.isActive) {
+                    gsap.to(workBgText, { 
+                        display: 'block', 
+                        visibility: 'visible', 
+                        opacity: 0.18, 
+                        duration: 0.4, 
+                        ease: 'power2.out',
+                        overwrite: 'auto' 
+                    });
+                } else {
+                    gsap.to(workBgText, { 
+                        opacity: 0, 
+                        duration: 0.3, 
+                        ease: 'power2.in', 
+                        overwrite: 'auto', 
+                        onComplete: () => { 
+                            gsap.set(workBgText, { display: 'none', visibility: 'hidden' }); 
+                        } 
+                    });
+                }
             },
-            onLeave: () => {
-                gsap.to(workBgText, { 
-                    opacity: 0, 
-                    duration: 0.4, 
-                    ease: 'power2.in', 
-                    overwrite: 'auto', 
-                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
-                });
-            },
-            onEnterBack: () => {
-                gsap.to(workBgText, { display: 'block', opacity: 0.2, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
-            },
-            onLeaveBack: () => {
-                gsap.to(workBgText, { 
-                    opacity: 0, 
-                    duration: 0.4, 
-                    ease: 'power2.in', 
-                    overwrite: 'auto', 
-                    onComplete: () => { gsap.set(workBgText, { display: 'none' }); } 
-                });
+            onRefresh: (self) => {
+                if (self.isActive) {
+                    gsap.set(workBgText, { display: 'block', visibility: 'visible', opacity: 0.18 });
+                } else {
+                    gsap.set(workBgText, { display: 'none', visibility: 'hidden', opacity: 0 });
+                }
             }
         });
     }
