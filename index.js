@@ -651,10 +651,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-
     // =========================================================================
-    // Scroll Reveal Animations for Project Panels (Optimized ScrollTrigger)
+    // Fixed Background "Work" Text — Idyllic Exact Scroll Gesture
+    // Fades in when scroll is between .workon and .workoff thresholds
+    // =========================================================================
+    function check_portfolio() {
+        const workon = document.querySelector('.workon');
+        const workoff = document.querySelector('.workoff');
+        const workText = document.querySelector('.work-background-text');
+        
+        if (!workon || !workoff || !workText) return;
+        
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        
+        const workonTop = workon.getBoundingClientRect().top + scrollTop;
+        const workoffTop = workoff.getBoundingClientRect().top + scrollTop;
+        
+        const startThreshold = workonTop - (windowHeight / 2);
+        const endThreshold = workoffTop - (windowHeight / 2);
+        
+        if (scrollTop > startThreshold && scrollTop < endThreshold) {
+            if (workText.style.display !== 'block' && !workText.isFadingIn) {
+                workText.isFadingIn = true;
+                workText.isFadingOut = false;
+                workText.style.display = 'block';
+                gsap.to(workText, { 
+                    opacity: 0.2, 
+                    duration: 0.5, 
+                    ease: 'power2.out', 
+                    overwrite: 'auto',
+                    onComplete: () => { workText.isFadingIn = false; }
+                });
+            }
+        } else {
+            if (workText.style.display !== 'none' && !workText.isFadingOut) {
+                workText.isFadingOut = true;
+                workText.isFadingIn = false;
+                gsap.to(workText, { 
+                    opacity: 0, 
+                    duration: 0.4, 
+                    ease: 'power2.in', 
+                    overwrite: 'auto',
+                    onComplete: () => {
+                        workText.style.display = 'none';
+                        workText.isFadingOut = false;
+                    }
+                });
+            }
+        }
+    }
+
+    window.addEventListener('scroll', check_portfolio, { passive: true });
+    window.addEventListener('resize', check_portfolio, { passive: true });
+    check_portfolio();
     // Matches Idyllic layout reveal with buttery smooth performance
     // =========================================================================
     document.querySelectorAll('.panelc').forEach((panel) => {
