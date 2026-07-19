@@ -531,86 +531,76 @@ a {
    ========================================================================== */
 .story-fixed-scroll-section {
     position: relative;
-    background-color: transparent; /* Transparent to let environmental scroll background show */
+    background-color: transparent;
+    padding: 100px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .story-fixed-scroll-container {
     width: 100%;
-    max-width: 100%;
-    padding: 0;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
 }
 
 .story-fixed-scroll-row {
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
     width: 100%;
 }
 
-/* Left Column: Fixed / Pinned Media container */
+/* Left Column: Clean Media container */
 .fixed-media-column {
-    width: 50%; /* Perfect half split like Idyllic */
-    height: 100vh;
-    position: sticky;
-    top: 0;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    position: relative;
 }
 
 .fixed-media-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
-    border-radius: 0; /* Full bleed edge-to-edge layout */
+    max-width: 440px;
+    aspect-ratio: 1 / 1;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     overflow: hidden;
-    background-color: #000;
-}
-
-.fixed-media-wrapper .hypnotic-bg {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(from 180deg, var(--color-magenta), var(--color-yellow), var(--color-green), var(--color-blue), var(--color-magenta));
-    opacity: 0.85;
-    filter: blur(25px);
-    animation: spinHypnotic 7s linear infinite;
-}
-
-@keyframes spinHypnotic {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .fixed-gif-img {
-    width: 58%;
+    width: 90%;
     height: auto;
-    position: relative;
-    z-index: 2;
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
-    transition: var(--transition-smooth);
+    object-fit: contain;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fixed-media-wrapper:hover .fixed-gif-img {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05) rotate(3deg);
 }
 
-/* Right Column: Scrollable text blocks */
+/* Right Column: Text content */
 .scroll-text-column {
-    width: 50%; /* Perfect half split like Idyllic */
+    width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 12vh 6vw; /* Generous fluid padding */
-    gap: 12vh; /* Spacious block margins */
+    padding: 0;
+    gap: 2rem;
 }
 
 .story-block {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .story-tag {
@@ -622,22 +612,18 @@ a {
 }
 
 .story-title-highlight {
-    font-size: var(--fs-h2); /* Fluid title scale matching Idyllic */
-    line-height: 1.0;
+    font-size: var(--fs-h2);
+    line-height: 1.05;
     font-family: var(--font-display);
     font-weight: 800;
     letter-spacing: -2px;
-    overflow: hidden;
 }
 
 .reveal-paragraph {
-    font-size: var(--fs-body); /* Fluid body text size */
-    color: var(--color-text-muted);
-    line-height: 1.5;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.75;
     font-weight: 400;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* ==========================================================================
